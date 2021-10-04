@@ -1,0 +1,109 @@
+// ---------------------------------------------------------===
+// Variables
+// ---------------------------------------------------------===
+
+// Colors
+$colors: (
+    blue: (
+        1: #619ecb,
+        2: #517ea1,
+    ),
+    black: (
+        1: #5c4d6b,
+        2: #1C0732,
+        3: #1f1f24,
+        4: #352446,
+        5: #352446,
+        '1a2': rgba(#000,.02),
+    ),
+    white: (
+        1: #fff,
+        2: #fcfcfc,
+        3: #f6f6f6,
+        4: #fbfcff,
+        5: #EDEBEF,
+        6: #A89CB4,
+        7: #f7f8fc,
+        '6a7': rgba(#A89CB4,.07),
+    ),
+    green: (
+        1: #52BD94,
+        2: #068465,
+    )
+);
+
+$dir: '../..';
+$font-path: '#{$dir}/fonts';
+$image-path: '#{$dir}/images';
+
+$graphik: 'Graphik', 'Arial', 'Helvetica', sans-serif;
+$base-font-sans-serif: $graphik;
+$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+
+// Body
+$base-text-color: color(black, 1) !default;
+$base-background-color: color(white, 7) !default;
+$font-size-base: 16px !default;
+$line-height-base: 1.5 !default;
+$base-font-family: $base-font-sans-serif !default;
+
+$vertical-rhythm: ($line-height-base * 1em);
+
+$base-min-width: 320px;
+
+// Liks
+$base-link-color: color(white, 6);
+
+// Buttons 
+$btn-color: color(white) !default;
+$btn-background: color(black) !default;
+$btn-padding: 0.4em 1em !default;
+$btn-font-size: inherit !default;
+
+// font-weight
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+
+// Forms
+$form-element-padding: $btn-padding !default;
+$form-element-border-color: color(black,5) !default;
+$form-element-bg: color(black,5) !default;
+$form-element-focus-border-color: color(black) !default;
+$form-border-radius: 5px !default;
+$placeholder-color: rgba(#EDEBEF, 0.7) !default;
+
+// Headers
+$h1-font-size: 32px !default;
+$h2-font-size: 28px !default;
+$h3-font-size: 24px !default;
+$h4-font-size: 20px !default;
+$h5-font-size: 18px !default;
+$h6-font-size: 16px !default;
+
+
+$h1-font-size-md: 46px !default;
+$h2-font-size-md: 40px !default;
+$h3-font-size-md: 36px !default;
+$h4-font-size-md: 32px !default;
+$h5-font-size-md: 28px !default;
+$h6-font-size-md: 24px !default;
+
+
+$headings-font-family: inherit !default;
+$headings-color: inherit !default;
+
+
+$animation-speed: 0.3s;
+
+// nice select
+$niceSelect: false;
+$niceCheckRadio: false;
+
+// grid 
+$usegrid: true;
+$grid-count: 12;
+$grid-gutter: 30px;
+$container-width: 1280px;
+$grid-gutter-mobile: 48px;  // Define if the mobile gutter is different
+// $container-gutter: 40px; // Define if the container gutter is different than grid gutter

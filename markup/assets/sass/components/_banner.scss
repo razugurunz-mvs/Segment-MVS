@@ -1,0 +1,110 @@
+.banner {
+  background: color(black ,2);
+  color: color(white, 6);
+  position: relative;
+  padding: 20px 0 69px;
+  font-size: 18px;
+  line-height: 1.5556;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 105px;
+  @include gradient-y(color(black ,2), color(black ,4), 0%, 100%);
+
+  @include media('screen', '>=phone') {
+    font-size: 20px;
+  }
+
+  @include media('screen', '>=tablet') {
+    padding: 20px 33px 100px;
+    margin-bottom: 0;
+  }
+
+  @include media('screen', '>=desktop') {
+    padding: 63px 65px 270px;
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 0;
+  }
+
+  &:after {
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    height: 71px;
+    content: "";
+    background-image: url(/assets/images/bg.png);
+    background-size: 100% 100%;
+    background-position: 50% 100%;
+    z-index: -1;
+
+    @include media('screen', '>=tablet') {
+      height: 120px;
+    }
+
+    @include media('screen', '>=desktop') {
+      height: 211px;
+    }
+  }
+
+  .title {
+    display: block;
+    text-transform: uppercase;
+    color: color(white, 6);
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
+
+    @include media('screen', '>=desktop') {
+      font-size: 18px;
+      margin-bottom: 9px;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  h1 {
+    color: color(white);
+    margin-bottom: 18px;
+
+    @include media('screen', '>=phone') {
+      line-height: 1.1429;
+      font-size: 40px;
+    }
+
+    @include media('screen', '>=desktop') {
+      font-size: 48px;
+      margin-bottom: 28px;
+    }
+
+    @include media('screen', '>=wider') {
+      font-size: 56px;
+    }
+  }
+
+  .sm-text {
+    color: rgba(#A89CB4, 0.7);
+    @include media('screen', '>=desktop') {
+      max-width: 400px;
+    }
+
+    a {
+      color: rgba(#A89CB4, 0.7);
+    }
+  }
+
+  .img-hold {
+    padding: 21px 63px 0;
+    margin: 0 auto -155px;
+    max-width: 400px;
+
+    @include media('screen', '>=tablet') {
+      padding-right: 0;
+    }
+
+    @include media('screen', '>=desktop') {
+      padding: 58px 44px 0 0;
+      max-width: 407px;
+      margin: 0 auto;
+    }
+  }
+}

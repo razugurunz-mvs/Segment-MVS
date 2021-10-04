@@ -1,0 +1,9 @@
+// ---------------------------------------------------------===
+// Fontface
+// ---------------------------------------------------------===
+
+@include font-face("icomoon", "icomoon", ("#{$font-path}/icomoon/icomoon"), 400, normal,);
+
+@include font-face('Graphik', 'Graphik', '#{$font-path}/graphik/Graphik-Regular',);
+@include font-face('Graphik', 'Graphik', '#{$font-path}/graphik/Graphik-Medium', 500);
+@include font-face('Graphik', 'Graphik', '#{$font-path}/graphik/Graphik-Semibold', 600);

@@ -1,0 +1,268 @@
+// ---------------------------------------------------------===
+// Footer styles
+// ---------------------------------------------------------===
+
+#footer {
+  background: color(black ,2);
+  color: color(white, 6);
+  padding: 39px 0 22px;
+  font-size: 14px;
+  line-height: 1.1429;
+  margin: 0 -9px;
+
+  .title {
+    display: block;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 27px;
+    color: color(white);
+  }
+
+  .f-nav-item {
+    padding-top: 45px;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: color(white);
+    }
+  }
+
+  .form {
+    padding: 0 0 24px;
+
+    @include media('screen', '>=tablet') {
+      padding-bottom: 23px;
+    }
+
+    input[type=email] {
+      height: 56px;
+      padding: 10px 20px 13px;
+      color: rgba(#EDEBEF, 0.6);
+
+      @include placeholder {
+        color: rgba(#EDEBEF, 0.6);
+      }
+
+      @include media('screen', '>=tablet') {
+        margin-bottom: 15px;
+      }
+
+      @include media('screen', '>=desktop') {
+        margin-bottom: 0;
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+    }
+
+    form {
+      @include media('screen', '>=tablet') {
+        display: block;
+      }
+
+      @include media('screen', '>=desktop') {
+        display: flex;
+      }
+    }
+
+    button {
+      @include media('screen', '>=tablet') {
+        width: 100%;
+      }
+
+      @include media('screen', '>=desktop') {
+        width: auto;;
+      }
+    }
+  }
+
+  .logo {
+    margin-bottom: 62px;
+  }
+
+  .content-r {
+    margin-left: auto;
+    margin-bottom: 18px;
+
+    @include media('screen', '>=tablet') {
+      max-width: 408px;
+    }
+  }
+
+  .social-networks {
+    padding: 0 24px;
+
+    @include media('screen', '>=phone') {
+      max-width: 144px;
+      flex: 0 0 144px;
+    }
+    
+    @include media('screen', '>=tablet') {
+      padding: 2px 15px 0;
+      max-width: 126px;
+      flex: 0 0 126px;
+    }
+  }
+}
+
+.footer-b,
+.footer-m {
+  padding: 50px 65px 0;
+
+  @include media('<tablet') {
+    padding: 50px 25px 0;
+  }
+
+  @include media('<phone') {
+    padding: 50px 0 0;
+  }
+
+  .container {
+    max-width: 1060px;
+  }
+}
+
+.footer-nav {
+  margin-bottom: 51px;
+  
+  ul {
+    @extend %listreset;
+  }
+
+  li {
+    margin-bottom: 16px;
+  }
+}
+
+.f-nav {
+  padding: 0 25px 10px;
+  flex: 1;
+  
+  @include media('screen', '>=tablet') {
+    padding: 0 15px;
+  }
+  
+  ul {
+    @extend %listreset;
+    
+    @include media('screen', '>=phone') {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  li {
+    margin-bottom: 24px;
+
+    @include media('screen', '>=phone') {
+      margin: 0 30px 32px 0;
+    }
+
+    @include media('screen', '>=widescreen') {
+      margin: 0 32px 32px 1px;
+    }
+  }
+}
+
+.footer-b {
+  padding-top: 0;
+
+  .container {
+    padding-top: 46px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      left: 34px;
+      right: 34px;
+      top: 15px;
+      content: "";
+      height: 1px;
+      @include gradient-x-three-colors(#28153d, #4b3a5c, 50%, #28153d);
+
+      @include media('screen', '>=tablet') {
+        left: 14px;
+        right: 14px;
+      }
+    }
+  }
+
+  .row {
+    display: block;
+
+    @include media('screen', '>=phone') {
+      display: flex;
+    }
+  }
+}
+
+.footer-top {
+  max-width: 1440px;
+  margin: 0 auto 6px;
+  overflow: hidden;
+  position: relative;
+
+  @include media('screen', '>=desktop') {
+    padding: 69px 0 100px;
+  }
+
+  @include media('screen', '>=widescreen') {
+    padding-bottom: 143px;
+  }
+
+  img {
+    min-width: 874px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+
+    @include media('screen', '>=tablet') {
+      min-width: 1400px;
+    }
+  }
+
+  &:before,
+  &:after {
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    @include gradient-x(#1C0732, rgba(#1C0732, 0.5%), 0%, 100%);
+    z-index: 1;
+
+    @include media('screen', '>=tablet') {
+      width: 300px;
+    }
+  }
+
+  &:after {
+    left: auto;
+    right: 0;
+    @include gradient-x( rgba(#1C0732, 0.5%), #1C0732, 0%, 100%);
+  }
+
+  .inner {
+    &:after {
+      @include gradient-y( rgba(#1C0732, 0.5%), #1C0732, 0%, 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    height: 70px;
+
+    @include media('screen', '>=desktop') {
+      height: 100px;
+      bottom: 100px;
+    }
+
+      @include media('screen', '>=widescreen') {
+        bottom: 110px;
+      }
+    }
+  }
+}
