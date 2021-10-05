@@ -1,9 +1,10 @@
 import '../global.js'
+import '../plugins/fixed-block.js'
 
 
 export const MobileNav = () => {
     var navopener = $('.nav-opener'),
-    navwrap   = $('.nav'),
+    navwrap   = $('.navigation'),
     links     = navwrap.find('a'),
     navactive = 'nav-active';
 
@@ -19,6 +20,12 @@ export const MobileNav = () => {
             item.addClass('hasdrop');
             if(link.length) link.addClass('hasdrop-a').attr({'data-more': '', 'data-outside': ''});
         }
+        
+        var test = jQuery('.hasdrop-a');
+
+        $(".go-back").on('click', function() {
+            test.removeClass("active");
+        });
     });
 
     links.click(function() {
@@ -109,4 +116,12 @@ export const Tabs = () => {
         $("#"+tab_id).addClass('active');
     })
     $('#'+$('[data-tab].active').data('tab')).addClass('active');
+}
+
+export const HeaderFixed = () => {
+    jQuery('#header').stickyScrollBlock({
+		setBoxHeight: true,
+		activeClass: 'fixed-position',
+		positionType: 'fixed'
+	});
 }

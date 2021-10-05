@@ -7,4 +7,5 @@ $(document).ready(function($){
     Helper.CustomSelect();
     Helper.OpenClose();
     Helper.Tabs();
+    Helper.HeaderFixed();
 });

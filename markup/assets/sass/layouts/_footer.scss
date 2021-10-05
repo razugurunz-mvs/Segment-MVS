@@ -5,10 +5,14 @@
 #footer {
   background: color(black ,2);
   color: color(white, 6);
-  padding: 39px 0 22px;
+  padding: 37px 0 22px;
   font-size: 14px;
   line-height: 1.1429;
   margin: 0 -9px;
+
+  @include media('screen', '>=tablet') {
+    padding-top: 39px;
+  }
 
   .title {
     display: block;
@@ -109,14 +113,14 @@
 
 .footer-b,
 .footer-m {
-  padding: 50px 65px 0;
+  padding: 42px 0 0;
 
-  @include media('<tablet') {
-    padding: 50px 25px 0;
+  @include media('screen', '>=desktop') {
+    padding: 50px 65px 0;
   }
 
-  @include media('<phone') {
-    padding: 50px 0 0;
+  @include media('screen', '>=phone') {
+    padding: 50px 25px 0;
   }
 
   .container {
@@ -143,7 +147,7 @@
   @include media('screen', '>=tablet') {
     padding: 0 15px;
   }
-  
+
   ul {
     @extend %listreset;
     
@@ -199,28 +203,19 @@
 }
 
 .footer-top {
-  max-width: 1440px;
+  max-width: 1204px;
   margin: 0 auto 6px;
+  padding-bottom: 18px;
   overflow: hidden;
   position: relative;
-
+  
   @include media('screen', '>=desktop') {
-    padding: 69px 0 100px;
+    padding: 62px 0 100px;
+    max-width: 1512px;
   }
 
   @include media('screen', '>=widescreen') {
-    padding-bottom: 143px;
-  }
-
-  img {
-    min-width: 874px;
-    position: relative;
-    transform: translateX(-50%);
-    left: 50%;
-
-    @include media('screen', '>=tablet') {
-      min-width: 1400px;
-    }
+    padding-bottom: 156px;
   }
 
   &:before,
