@@ -143,42 +143,45 @@ hr {
   align-items: center;
 }
 
-.link {
-  font-size: 18px;
-  color: #A89CB4;
-  font-weight: $font-semibold;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  padding: 0 23px 6px 0;
 
-  &:after {
-    font-family: 'icomoon';
-    content: "\e902";
-    font-size: 11px;
-    position: absolute;
-    right: 0;
-    top: 7px;
-  }
-
-  &:before {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: currentColor;
-    width: 100%;
-    transform: scaleX(0);
-    transition: transform 0.6s 0.1s cubic-bezier(0.25, 1, 0.5, 1);
-    transform-origin: right;
-    content: '';
-  }
+.link-holder {
+  a {
+    font-size: 18px;
+    color: #A89CB4;
+    font-weight: $font-semibold;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 23px 6px 0;
   
-  &:hover {
+    &:after {
+      font-family: 'icomoon';
+      content: "\e902";
+      font-size: 11px;
+      position: absolute;
+      right: 0;
+      top: 7px;
+    }
+  
     &:before {
-      transform: scaleX(1);
-      transform-origin: left;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: currentColor;
+      width: 100%;
+      transform: scaleX(0);
+      transition: transform 0.6s 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+      transform-origin: right;
+      content: '';
+    }
+    
+    &:hover {
+      &:before {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
     }
   }
 }

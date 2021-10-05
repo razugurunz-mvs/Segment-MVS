@@ -280,13 +280,18 @@
   }
 }
 
+#nav {
+  @include media('screen', '>=desktop') {
+    flex: 1;
+    padding-bottom: 3px;
+  }
+}
+
 .navigation {
   @extend %listreset;
 
   @include media('screen', '>=desktop') {
-    flex: 1;
     display: flex;
-    padding-bottom: 3px;
     position: static;
     width: auto;
     background: none;

@@ -1,3 +1,7 @@
+// ---------------------------------------------------------===
+// Banner styles
+// ---------------------------------------------------------===
+
 .banner {
   background: color(black ,2);
   color: color(white, 6);
@@ -8,7 +12,7 @@
   position: relative;
   z-index: 1;
   margin-bottom: 105px;
-  @include gradient-y(color(black ,2), color(black ,4), 0%, 100%);
+  @include gradient-y(color(black ,2), #1d0833, 0%, 100%);
 
   @include media('screen', '>=phone') {
     font-size: 20px;
