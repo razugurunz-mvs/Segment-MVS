@@ -1,9 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Marketo Variables start -->
+  <meta class="mktoString" id="pageTitle" mktoName="Page Title" default="Segment | #1 CDP to Manage Customer Data">
+  <meta class="mktoColor" id="bodyBackgroundColor" mktoName="Body: BG Color" default="#f7f8fc">
+
+
+  <meta class="mktoColor" id="headerBackgroundColor" mktoName="Header: BG Color" default="#1C0732">
+  <meta class="mktoBoolean" id="showHeader" mktoName="Header?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showHeader_rightContent" mktoName="Header: Right Content?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+
+  <meta class="mktoString" id="headerLogin_link" mktoName="Header Login Link" default="https://app.segment.com/login/">
+  <meta class="mktoString" id="headerLogin_text" mktoName="Header Login Text" default="Log in">
+
+  <meta class="mktoString" id="headerButton_link" mktoName="Header Button Link" default="https://app.segment.com/signup/">
+  <meta class="mktoString" id="headerButton_text" mktoName="Header Button Text" default="Sign up">
+
+
+  <meta class="mktoColor" id="bannerBackgroundColorGradient01" mktoName="Banner Gradient 1" default="#1C0732">
+  <meta class="mktoColor" id="bannerBackgroundColorGradient02" mktoName="Banner Gradient 2" default="#1d0833">
+  <meta class="mktoBoolean" id="showBanner" mktoName="Banner?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showBanner_leftContent" mktoName="Banner: Text Block?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showBanner_title" mktoName="Banner: Title?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showBanner_rightContent" mktoName="Banner: Right Content?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showBannerBottomContent" mktoName="Banner: Bottom Content?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+
+  <meta class="mktoBoolean" id="showBodyCopy" mktoName="Body Copy?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showBodyCopy_leftContent" mktoName="Body Copy: Text Block?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showBodyCopy_rightContent" mktoName="Body Copy: Image ?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+  <meta class="mktoString" id="customHTML" mktoName="Custom HTML" default="" allowHTMl="true">
+  <meta class="mktoString" id="customCSS" mktoName="Custom CSS" default="" allowCSS="true">
+  <!-- Marketo Variables end -->
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Segment | #1 CDP to Manage Customer Data</title>
+  <title>${pageTitle}</title>
   <link rel="apple-touch-icon" sizes="57x57" href="https://segment.com/_next/static/images/apple-icon-57x57-803036a288dbca2ccbfbca3b6ab18ae7.png">
   <link rel="apple-touch-icon" sizes="60x60" href="https://segment.com/_next/static/images/apple-icon-60x60-5dfcedbef9422a84cb812f71b6c9a28f.png">
   <link rel="apple-touch-icon" sizes="72x72" href="https://segment.com/_next/static/images/apple-icon-72x72-4b5f47b162924e8b631ae219c677183c.png">
@@ -21,6 +56,13 @@
   <meta name="msapplication-TileColor" content="#F1FAF6">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="assets/compiled/css/app.css">
+
+  <style>
+    body { background-color: ${bodyBackgroundColor}; }
+    #header { background-color: ${headerBackgroundColor}; }
+    .banner { background-image: linear-gradient(to bottom, ${bannerBackgroundColorGradient01} 0%, ${bannerBackgroundColorGradient02} 100%);}
+    #footer { background-color: ${videoSectionBackgroundColor}; }
+  </style>
 </head>
 <body>
   <div id="wrapper">
@@ -613,43 +655,49 @@
                 </li>
               </ul>
             </nav>
-            <ul class="header-r">
-              <li><a class="white-link" href="https://app.segment.com/login/">Log in</a></li>
-              <li><a href="https://app.segment.com/signup/" class="btn">Sign up</a></li>
-            </ul>
+            <div style="display: ${showHeader_rightContent};">
+              <ul class="header-r">
+                <li><a class="white-link" href="${headerLogin_link}">${headerLogin_text}</a></li>
+                <li><a href="${headerButton_link}" class="btn">${headerButton_text}</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </header>
     <main role="main" id="main">
-      <div class="banner">
+      <div class="banner" style="display: ${showBanner};">
         <div class="container">
           <div class="row">
-            <div class="col-sm-7 col-lg-5">
-              <div class="title">OVERLINE COPY</div>
-              <h1>This is H1 copy, main headline on the page</h1>
-              <p>This is paragraph copy, or referred to as Description Text which pairs with the H1 above.</p>
+            <div class="col-sm-7 col-lg-5" style="display: ${showBanner_leftContent};">
+              <div class="title" style="display: ${showBanner_title};"><div class="mktoText" id="banner_title" mktoname="Banner: Title">OVERLINE COPY</div></div>
+              <div class="mktoText" id="banner_leftContent" mktoname="Banner: Left Content">
+                <h1>This is H1 copy, main headline on the page</h1>
+                <p>This is paragraph copy, or referred to as Description Text which pairs with the H1 above.</p>
+              </div>
               <div class="form">
                 <form action="#">
                   <input type="email" placeholder="Your work email">
                   <button class="btn" type="submit" value="Call to action">Call to action</button>
                 </form>
               </div>
-              <div class="sm-text">
-                <p>By requesting a demo you agree to Segment's <a href="https://segment.com/legal/privacy/">Privacy Policy</a>, and you consent to receive marketing communications, including automated text messages, from Segment.</p>
+              <div class="sm-text" style="display: ${showBannerBottomContent};">
+                <div class="mktoText" id="banner_bottomContent" mktoname="Banner: Bottom Content">
+                  <p>By requesting a demo you agree to Segment's <a href="https://segment.com/legal/privacy/">Privacy Policy</a>, and you consent to receive marketing communications, including automated text messages, from Segment.</p>
+                </div>
               </div>
             </div>
-            <div class="col-sm-5 col-lg-7">
-              <div class="img-hold"><img src="assets/images/img01.png" alt="image description"></div>
+            <div class="col-sm-5 col-lg-7" style="display: ${showBanner_rightContent};">
+              <div class="img-hold mktoText" id="banner_rightContent" mktoname="Banner: Image"><img src="assets/images/img01.png" alt="image description"></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="content-section">
+      <div class="content-section" style="display: ${showBodyCopy};">
         <div class="container">
           <div class="row row-reverse-md align-center">
-            <div class="col-sm-6 col-lg-5">
-              <div class="content">
+            <div class="col-sm-6 col-lg-5" style="display: ${showBodyCopy_rightContent};">
+              <div class="content mktoText" id="bodyCopy_rightContent" mktoname="Body Copy: Content">
                 <h2>In this report, <br> you’ll learn...</h2>
                 <ul>
                   <li>List formatted copy</li>
@@ -660,8 +708,8 @@
                 </ul>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-7">
-              <div class="img-hold"><img src="assets/images/img02.png" alt="image description"></div>
+            <div class="col-sm-6 col-lg-7" style="display: ${showBodyCopy_leftContent};">
+              <div class="img-hold mktoText" id="bodyCopy_leftContent" mktoname="Body Copy: Image"><img src="assets/images/img02.png" alt="image description"></div>
             </div>
           </div>
         </div>
