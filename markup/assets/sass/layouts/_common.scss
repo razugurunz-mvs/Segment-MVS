@@ -60,6 +60,35 @@ hr {
   text-decoration: none;
   color: color(white);
   font-weight: 500;
+  
+  @include media('screen', '>=desktop') {
+    position: relative;
+  }
+
+  &:after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    background: currentColor;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.6s 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: right;
+    content: "";
+    display: none;
+
+    @include media('screen', '>=desktop') {
+      display: block;
+    }
+  }
+
+  &:hover {
+    &:after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
 }
 
 .sm-text {
@@ -113,11 +142,24 @@ hr {
       left: 2px;
       top: 50%;
       transform: translateY(-50%);
-      font-family: "icomoon";
+      // font-family: "icomoon";
       content: "\e900";
       font-size: 17px;
       color: #6156BB;
       margin-top: 2px;
+    }
+
+    &:after {
+      width: 22px;
+      height: 16px;
+      position: absolute;
+      left: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-top: 2px;
+      content: "";
+      background: url(https://gopages.segment.com/rs/667-MPQ-382/images/icon-checked.svg);
+      background-size: cover;
     }
   }
 
@@ -145,49 +187,47 @@ hr {
 
 
 .link-holder {
-  a {
-    font-size: 18px;
-    color: #A89CB4;
-    font-weight: $font-semibold;
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
-    padding: 0 23px 6px 0;
+}
+
+.link {
+  font-size: 18px;
+  color: #A89CB4;
+  font-weight: $font-semibold;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 23px 6px 0;
+
+  img {
+    position: absolute;
+    top: 7px;
+    right: 0;
+  }
   
-    &:after {
-      font-family: 'icomoon';
-      content: "\e902";
-      font-size: 11px;
-      position: absolute;
-      right: 0;
-      top: 7px;
-    }
-  
+  &:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: currentColor;
+    width: 100%;
+    transform: scaleX(0);
+    transition: transform 0.6s 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: right;
+    content: '';
+  }
+
+  &:hover {
     &:before {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: currentColor;
-      width: 100%;
-      transform: scaleX(0);
-      transition: transform 0.6s 0.1s cubic-bezier(0.25, 1, 0.5, 1);
-      transform-origin: right;
-      content: '';
-    }
-    
-    &:hover {
-      &:before {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
+      transform: scaleX(1);
+      transform-origin: left;
     }
   }
 }
 
 .logo-list {
-  
+
   ul {
     @extend %listreset;
     display: flex;
@@ -208,18 +248,18 @@ hr {
   }
 
   li {
-      max-width: 64px;
-      flex: 0 0 64px;
-      height: 64px;
-      padding: 3px;
-      
-      @include media('screen', '>=phone') {
-        max-width: 86px;
-        flex: 0 0 86px;
-        padding: 6px;
-        height: 86px;
-      }
-    
+    max-width: 64px;
+    flex: 0 0 64px;
+    height: 64px;
+    padding: 3px;
+
+    @include media('screen', '>=phone') {
+      max-width: 86px;
+      flex: 0 0 86px;
+      padding: 6px;
+      height: 86px;
+    }
+
     @include media('screen', '>=desktop') {
       max-width: 108px;
       flex: 0 0 108px;

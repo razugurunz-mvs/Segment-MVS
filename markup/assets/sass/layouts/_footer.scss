@@ -11,7 +11,7 @@
   margin: 0 -9px;
 
   @include media('screen', '>=tablet') {
-    padding-top: 39px;
+    padding: 39px 40px 22px;
   }
 
   .title {
@@ -28,6 +28,7 @@
 
   a {
     text-decoration: none;
+    color: color(white, 6);
 
     &:hover {
       color: color(white);
@@ -161,7 +162,7 @@
     margin-bottom: 24px;
 
     @include media('screen', '>=phone') {
-      margin: 0 30px 32px 0;
+      margin: 0 30px 15px 0;
     }
 
     @include media('screen', '>=widescreen') {
@@ -228,6 +229,7 @@
     content: "";
     @include gradient-x(#1C0732, rgba(#1C0732, 0.5%), 0%, 100%);
     z-index: 1;
+    pointer-events: none;
 
     @include media('screen', '>=tablet') {
       width: 300px;
@@ -243,12 +245,13 @@
   .inner {
     &:after {
       @include gradient-y( rgba(#1C0732, 0.5%), #1C0732, 0%, 100%);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    content: "";
-    height: 70px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "";
+      height: 70px;
+      pointer-events: none;
 
     @include media('screen', '>=desktop') {
       height: 100px;

@@ -8,7 +8,8 @@ export const MobileNav = () => {
     links     = navwrap.find('a'),
     navactive = 'nav-active';
 
-    navopener.click(function() {
+    navopener.click(function(event) {
+        event.preventDefault()
         $('body').toggleClass(navactive);
     });
 

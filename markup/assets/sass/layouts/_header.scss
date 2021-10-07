@@ -5,12 +5,12 @@
 #header {
   background: color(black ,2);
   color: color(white, 6);
-  padding: 21px 0;
+  padding: 25px 0;
   position: relative;
   z-index: 999;
 
   @include media('screen', '>=tablet') {
-    padding: 20px 33px;
+    padding: 33px;
   }
 
   @include media('screen', '>=desktop') {
@@ -55,7 +55,7 @@
     opacity: 0;
     visibility: hidden;
     @include animate(opacity visibility);
-    
+
     @include media('screen', '>=desktop') {
       height: auto;
       background: none;
@@ -76,17 +76,26 @@
     .hasdrop-a {
       position: relative;
 
-      &:before {
-        font-family: "icomoon";
-        content: "\e902";
+      &:after {
         position: absolute;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 14px;
+        background: url(https://gopages.segment.com/rs/667-MPQ-382/images/arrow-right-black.svg);
+        width: 7px;
+        height: 11px;
+        content: "";
+        background-size: cover;
+
 
         @include media('screen', '>=desktop') {
           display: none;
+        }
+      }
+
+      &:hover {
+        &:before {
+          color: rgb(82, 189, 148);
         }
       }
     }
@@ -113,34 +122,35 @@
       }
 
       &:before {
-        font-family: "icomoon";
-        content: "\e901";
-        position: absolute;
-        left: 0;
-        top: 7px;
-        font-size: 14px;
-      }
-    }
+       position: absolute;
+       left: 0;
+       top: 7px;
+       background: url(https://gopages.segment.com/rs/667-MPQ-382/images/arrow-left-black.png);
+       width: 14px;
+       height: 14px;
+       content: "";
+       background-size: cover;
+     }
+   }
+ }
+
+ .wrap {
+  display: flex;
+  flex-direction: column;
+
+  @include media('<desktop') {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    position: relative;
   }
 
-  .wrap {
-    display: flex;
-    flex-direction: column;
-
-    @include media('<desktop') {
-      overflow-y: auto;
-      overflow-x: hidden;
-      // max-height: 100%;
-      height: 100%;
-      position: relative;
-    }
-
-    @include media('screen', '>=desktop') {
-      flex-direction: row;
-      align-items: center;
-      flex: 1;
-    }
+  @include media('screen', '>=desktop') {
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
   }
+}
 }
 
 .header-r {
@@ -266,14 +276,14 @@
   }
 
   &.drop-small {
-    
+
     @include media('screen', '>=desktop') {
       max-width: 460px;
     }
   }
 
   &.drop-medium {
-    
+
     @include media('screen', '>=desktop') {
       max-width: 850px;
     }
@@ -301,13 +311,13 @@
   a {
     text-decoration: none;
     color: rgb(28, 7, 50);
-    
+
     @include media('screen', '>=desktop') {
       color: color(white);
     }
   }
 
- > li {
+  > li {
     padding: 0 24px;
     font-weight: $font-medium;
 
@@ -334,33 +344,38 @@
     }
 
     > a {
-      padding: 20px 0;
+      padding: 12px 0;
       display: block;
-      
+
       @include media('screen', '>=desktop') {
         position: relative;
+        padding: 0;
+      }
+
+      span {
+        position: relative;
         padding: 8px 0;
-      }
+        display: inline-block;
+        vertical-align: top;
 
-      &:after {
-        @include media('screen', '>=desktop') {
-          position: absolute;
-        bottom: 4px;
-        left: 0;
-        height: 2px;
-        background: currentColor;
-        width: 100%;
-        transform: scaleX(0);
-        transition: transform 0.6s 0.1s cubic-bezier(0.25, 1, 0.5, 1);
-        transform-origin: right;
-        content: "";
-        }
-      }
-
-      &:hover {
         &:after {
-          transform: scaleX(1);
-          transform-origin: left;
+          position: absolute;
+          bottom: 4px;
+          left: 0;
+          height: 2px;
+          background: currentColor;
+          width: 100%;
+          transform: scaleX(0);
+          transition: transform 0.6s 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+          transform-origin: right;
+          content: "";
+        }
+
+        &:hover {
+          &:after {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
         }
       }
 
@@ -393,7 +408,6 @@
     height: 1.5rem;
     min-height: 1.5rem;
     margin-right: 16px;
-    // margin-right: 22px;
 
     @include media('screen', '>=desktop') {
       width: 56px;
@@ -426,10 +440,9 @@
     display: flex;
     font-size: 14px;
     line-height: 24px;
-    // color: #737a96;
     color: rgb(19, 5, 34);
     font-weight: $font-medium;
-    
+
     @include media('screen', '>=desktop') {
       color: rgb(19, 5, 34);
       line-height: 1;
@@ -484,47 +497,45 @@
   }
 
   li {
-    // padding: 0;
 
    @include media('screen', '>=desktop') {
     padding-bottom: 17px;
-   }
   }
+}
 
+.title {
+  font-size: 14px;
+  font-weight: normal;
+  color: rgb(146, 136, 157);
+
+  @include media('screen', '>=desktop') {
+    font-weight: $font-medium;
+    color: rgb(19, 5, 34)
+  }
+}
+
+&.style-01 {
   .title {
-    font-size: 14px;
-    font-weight: normal;
-    color: rgb(146, 136, 157);
+    color: rgb(115, 122, 150);
 
     @include media('screen', '>=desktop') {
-      font-weight: $font-medium;
-      color: rgb(19, 5, 34)
+      font-weight: 400;
     }
   }
 
-  &.style-01 {
-    .title {
-      color: rgb(115, 122, 150);
+  li {
 
-      @include media('screen', '>=desktop') {
-        font-weight: 400;
-      }
+    @include media('screen', '>=desktop') {
+      padding: 0 0 16px;
     }
 
-    li {
-      // padding: 0 0 20px;
-
+    &:last-child {
       @include media('screen', '>=desktop') {
-        padding: 0 0 16px;
-      }
-
-      &:last-child {
-        @include media('screen', '>=desktop') {
-          padding-bottom: 6px;
-        }
+        padding-bottom: 6px;
       }
     }
   }
+}
 }
 
 .flex {
@@ -704,7 +715,7 @@ hr {
 
   .nav-active & {
     @include media('<desktop') {
-    display: none;
+      display: none;
     }
   }
 }
@@ -746,7 +757,7 @@ body {
 
 
   span {
-    
+
     span {
       width: 100%;
       position: absolute;

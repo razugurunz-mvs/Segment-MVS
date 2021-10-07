@@ -2,8 +2,28 @@
 // Fontface
 // ---------------------------------------------------------===
 
-@include font-face("icomoon", "icomoon", ("#{$font-path}/icomoon/icomoon"), 400, normal,);
+@font-face {
+    font-family: 'Graphik';
+    src: url('https://gopages.segment.com/rs/667-MPQ-382/images/Graphik-Regular.woff2') format('woff2'),
+        url('https://gopages.segment.com/rs/667-MPQ-382/images/Graphik-Regular.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
 
-@include font-face('Graphik', 'Graphik', '#{$font-path}/graphik/Graphik-Regular',);
-@include font-face('Graphik', 'Graphik', '#{$font-path}/graphik/Graphik-Medium', 500);
-@include font-face('Graphik', 'Graphik', '#{$font-path}/graphik/Graphik-Semibold', 600);
+@font-face {
+    font-family: 'Graphik';
+    src: url('https://gopages.segment.com/rs/667-MPQ-382/images/Graphik-Medium.woff2') format('woff2'),
+        url('https://gopages.segment.com/rs/667-MPQ-382/images/Graphik-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('https://gopages.segment.com/rs/667-MPQ-382/images/Graphik-Semibold.woff2') format('woff2'),
+        url('https://gopages.segment.com/rs/667-MPQ-382/images/Graphik-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

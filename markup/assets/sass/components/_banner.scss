@@ -6,11 +6,12 @@
   background: color(black ,2);
   color: color(white, 6);
   position: relative;
-  padding: 20px 0 69px;
+  padding: 38px 0 69px;
   font-size: 18px;
   line-height: 1.5556;
   position: relative;
   z-index: 1;
+  margin-top: -1px;
   margin-bottom: 105px;
   @include gradient-y(color(black ,2), #1d0833, 0%, 100%);
 
@@ -24,7 +25,7 @@
   }
 
   @include media('screen', '>=desktop') {
-    padding: 63px 65px 270px;
+    padding: 65px 65px 270px;
     font-size: 24px;
     line-height: 40px;
     margin-bottom: 0;
@@ -96,18 +97,17 @@
   }
 
   .img-hold {
-    padding: 21px 63px 0;
-    margin: 0 auto -155px;
-    max-width: 400px;
+    padding: 21px 3px 0;
+    margin: 0 auto -154px;
+    max-width: 500px;
 
     @include media('screen', '>=tablet') {
       padding-right: 0;
+      max-width: none;
     }
 
-    @include media('screen', '>=desktop') {
-      padding: 58px 44px 0 0;
-      max-width: 407px;
-      margin: 0 auto;
+    @include media('screen', '>=wider') {
+      padding: 60px 96px 0 55px;
     }
   }
 }

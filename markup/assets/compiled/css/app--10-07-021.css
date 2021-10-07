@@ -2298,7 +2298,7 @@ hr {
   align-items: center;
 }
 
-.link {
+.link-holder a {
   font-size: 18px;
   color: #A89CB4;
   font-weight: 600;
@@ -2307,12 +2307,12 @@ hr {
   vertical-align: top;
   padding: 0 23px 6px 0;
 }
-.link img {
+.link-holder a img {
   position: absolute;
   top: 7px;
   right: 0;
 }
-.link:before {
+.link-holder a:before {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2325,7 +2325,7 @@ hr {
   transform-origin: right;
   content: "";
 }
-.link:hover:before {
+.link-holder a:hover:before {
   transform: scaleX(1);
   transform-origin: left;
 }
