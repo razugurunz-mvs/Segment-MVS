@@ -28,9 +28,14 @@
 
   .btn {
     min-width: 0;
-    padding: 7px 22px;
-    
+    padding: 7px 22px 11px;
+
     @include media('screen', '>=desktop') {
+      min-width: 120px;
+      padding: 7px 22px;
+    }
+
+    @include media('screen', '>=widescreen') {
       min-width: 161px;
     }
   }
@@ -183,7 +188,7 @@
       color: #6156BB;
       border-radius: 5px;
       text-decoration: none;
-      padding: 7px 22px;
+      padding: 7px 22px 11px;
 
       &:hover {
         background: #6156BB;

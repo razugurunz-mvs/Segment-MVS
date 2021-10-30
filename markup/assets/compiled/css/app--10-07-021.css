@@ -1436,9 +1436,15 @@ input[type=submit]:hover {
 }
 #header .btn {
   min-width: 0;
-  padding: 7px 22px;
+  padding: 7px 22px 11px;
 }
 @media screen and (min-width: 992px) {
+  #header .btn {
+    min-width: 120px;
+    padding: 7px 22px;
+  }
+}
+@media screen and (min-width: 1200px) {
   #header .btn {
     min-width: 161px;
   }
@@ -1584,7 +1590,7 @@ input[type=submit]:hover {
     color: #6156BB;
     border-radius: 5px;
     text-decoration: none;
-    padding: 7px 22px;
+    padding: 7px 22px 11px;
   }
   .header-r .white-link:hover {
     background: #6156BB;
@@ -2298,7 +2304,7 @@ hr {
   align-items: center;
 }
 
-.link-holder a {
+.link {
   font-size: 18px;
   color: #A89CB4;
   font-weight: 600;
@@ -2307,12 +2313,12 @@ hr {
   vertical-align: top;
   padding: 0 23px 6px 0;
 }
-.link-holder a img {
+.link img {
   position: absolute;
   top: 7px;
   right: 0;
 }
-.link-holder a:before {
+.link:before {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -2325,7 +2331,7 @@ hr {
   transform-origin: right;
   content: "";
 }
-.link-holder a:hover:before {
+.link:hover:before {
   transform: scaleX(1);
   transform-origin: left;
 }
