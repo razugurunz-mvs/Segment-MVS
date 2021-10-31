@@ -35,6 +35,7 @@
   <meta class="mktoBoolean" id="showHero_rightContent" mktoName="Hero: Right Content?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="showHeroBottomContent" mktoName="Hero: Bottom Content?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="showHero_form" mktoName="Hero: Form?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="heroButton_text" mktoName="Hero Button Text" default="Call to action">
 
   <meta class="mktoBoolean" id="showAgendaSection" mktoName="Agenda Section?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="showAgendaSection_leftContent" mktoName="Agenda Section: Text Block?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
@@ -78,6 +79,7 @@
   <meta class="mktoBoolean" id="showLink" mktoName="Link?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoString" id="footer_link" mktoName="Footer Create A/C Link" default="https://app.segment.com/signup/">
   <meta class="mktoString" id="footer_text" mktoName="Footer Create A/C Text" default="Create free account">
+  <meta class="mktoString" id="footerButton_text" mktoName="Footer Button Text" default="Get a demo">
 
   <meta class="mktoBoolean" id="showFooter_nav" mktoName="Footer Nav?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="showFooter_navProducts" mktoName="Footer: Products?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
@@ -736,7 +738,7 @@
                 <div class="mktoForm" id="contentBlock_form" mktoname="Form">
                   <form action="#">
                     <input type="email" placeholder="Your work email">
-                    <button class="btn" type="submit" value="Call to action">Call to action</button>
+                    <button class="btn" type="submit" value="Call to action">${heroButton_text}</button>
                   </form>
                 </div>
               </div>
@@ -821,7 +823,7 @@
                   <div class="mktoForm" id="footer_form" mktoname="Footer Form">
                     <form action="#">
                       <input type="email" placeholder="Your work email">
-                      <button class="btn" type="submit" value="Get a demo">Get a demo</button>
+                      <button class="btn" type="submit" value="Get a demo">${footerButton_text}</button>
                     </form>
                   </div>
                 </div>

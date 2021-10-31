@@ -32,7 +32,7 @@
 
     @include media('screen', '>=desktop') {
       min-width: 120px;
-      padding: 7px 22px;
+      padding: 6px 22px 8px;
     }
 
     @include media('screen', '>=widescreen') {
