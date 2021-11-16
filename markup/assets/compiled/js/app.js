@@ -2212,81 +2212,79 @@ var HeaderFixed = function HeaderFixed() {
   });
 };
 var test = function test() {
-  (function ($) {
-    var input = $("#hero-form input[type='email']");
-    $("input[type='email']").on('keyup change', function (e) {
-      var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  var input = $("#hero-form input[type='email']");
+  $("input[type='email']").on('keyup change', function (e) {
+    var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-      if (!regex.test($(this).val())) {
-        input.closest('form').addClass('invalid');
-      } else {
-        input.closest('form').removeClass('invalid');
-      }
-    });
-    $('#hero-form, .js-demo-form').submit(function (e) {
-      if ($(this).hasClass("invalid")) {
-        e.preventDefault();
-        return false;
-      }
-
-      var currentInput = $(this).find("input[type='email']");
-
-      if (currentInput.val() === '') {
-        return;
-      }
-
-      e.preventDefault(); // Utility to convert parameters into an object
-
-      function deparam(paramString) {
-        var obj = {};
-        paramString = paramString.replace('?', '');
-        var params = paramString.split('&');
-        params.forEach(function (param) {
-          var paramArr = param.split('='),
-              key = paramArr[0],
-              val = paramArr[1];
-          obj[key] = val;
-        });
-        return obj;
-      }
-
-      var encodedEmail = btoa(currentInput.val()); // Carry over params from the previous page if applicable
-
-      var appendedParams = {};
-
-      if (window.location.href.indexOf('?') >= 0) {
-        var queryParams = window.location.href.split('?');
-        appendedParams = deparam(queryParams[1]);
-      } // Check for hidden utm input and append to parameters if it exists
-
-
-      var hiddenUtmsInput = $(this).find("input[name='hidden_utm']");
-      var hiddenUtms = '';
-
-      if (hiddenUtmsInput.length > 0) {
-        hiddenUtms = deparam(hiddenUtmsInput.val());
-      }
-
-      if (appendedParams) {
-        // replace the applicable keys
-        Object.keys(hiddenUtms).forEach(function (key) {
-          appendedParams[key] = hiddenUtms[key];
-        });
-      } else {
-        appendedParams = hiddenUtms;
-      }
-
-      var appendedParamString = "&".concat($.param(appendedParams)); // See https://stackoverflow.com/a/506004 for browser redirect API:
-
-      var redirect = "/demo/?email=".concat(encodedEmail).concat(appendedParamString);
-
-      if (window.location.pathname.indexOf('/journeys') >= 0) {
-        redirect = "https://learn.segment.com/journeys-demo-request/?email=".concat(encodedEmail).concat(appendedParamString);
-      }
-
-      window.location.href = redirect;
+    if (!regex.test($(this).val())) {
+      input.closest('form').addClass('invalid');
+    } else {
+      input.closest('form').removeClass('invalid');
+    }
+  });
+  $('#hero-form, .js-demo-form').submit(function (e) {
+    if ($(this).hasClass("invalid")) {
+      e.preventDefault();
       return false;
-    });
+    }
+
+    var currentInput = $(this).find("input[type='email']");
+
+    if (currentInput.val() === '') {
+      return;
+    }
+
+    e.preventDefault(); // Utility to convert parameters into an object
+
+    function deparam(paramString) {
+      var obj = {};
+      paramString = paramString.replace('?', '');
+      var params = paramString.split('&');
+      params.forEach(function (param) {
+        var paramArr = param.split('='),
+            key = paramArr[0],
+            val = paramArr[1];
+        obj[key] = val;
+      });
+      return obj;
+    }
+
+    var encodedEmail = btoa(currentInput.val()); // Carry over params from the previous page if applicable
+
+    var appendedParams = {};
+
+    if (window.location.href.indexOf('?') >= 0) {
+      var queryParams = window.location.href.split('?');
+      appendedParams = deparam(queryParams[1]);
+    } // Check for hidden utm input and append to parameters if it exists
+
+
+    var hiddenUtmsInput = $(this).find("input[name='hidden_utm']");
+    var hiddenUtms = '';
+
+    if (hiddenUtmsInput.length > 0) {
+      hiddenUtms = deparam(hiddenUtmsInput.val());
+    }
+
+    if (appendedParams) {
+      // replace the applicable keys
+      Object.keys(hiddenUtms).forEach(function (key) {
+        appendedParams[key] = hiddenUtms[key];
+      });
+    } else {
+      appendedParams = hiddenUtms;
+    }
+
+    var appendedParamString = "&".concat($.param(appendedParams)); // See https://stackoverflow.com/a/506004 for browser redirect API:
+
+    var redirect = "/demo/?email=".concat(encodedEmail).concat(appendedParamString);
+
+    if (window.location.pathname.indexOf('/journeys') >= 0) {
+      redirect = "https://learn.segment.com/journeys-demo-request/?email=".concat(encodedEmail).concat(appendedParamString);
+    }
+
+    window.location.href = redirect;
+    return false;
   });
 };
 

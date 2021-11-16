@@ -128,7 +128,6 @@ export const HeaderFixed = () => {
 }
 
 export const test = () => {
-    (function ($) {
   var input = $("#hero-form input[type='email']")
 
   $("input[type='email']").on('keyup change', function (e) {
@@ -204,5 +203,4 @@ export const test = () => {
     window.location.href = redirect
     return false
   })
-})
 }
