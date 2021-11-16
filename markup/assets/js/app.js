@@ -8,4 +8,5 @@ $(document).ready(function($){
     Helper.OpenClose();
     Helper.Tabs();
     Helper.HeaderFixed();
+    Helper.test();
 });
