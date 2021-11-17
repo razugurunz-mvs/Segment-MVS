@@ -651,7 +651,6 @@ input[type=url],
 input[type=date],
 textarea {
     height: 56px;
-    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 992px) {
@@ -669,7 +668,6 @@ input[type=password],
 input[type=url],
 input[type=date],
 textarea {
-    margin-bottom: 0;
     padding: 10px 19px 14px;
   }
 }
@@ -2809,16 +2807,11 @@ hr {
     margin-left: auto;
   }
 }
-.banner .form-holder .input {
-  margin-bottom: 20px;
-}
-.banner .form-holder input {
-  margin-bottom: 0;
-}
 .banner .form-holder button {
   width: 100%;
 }
 .banner .form-holder .sm-text {
+  padding-top: 20px;
   max-width: none;
 }
 

@@ -39,11 +39,9 @@ textarea {
 
   @include media('screen', '>=phone') {
     height: 56px;
-    margin-bottom: 0;
   }
 
   @include media('screen', '>=desktop') {
-    margin-bottom: 0;
     padding: 10px 19px 14px;
   }
   
