@@ -28,6 +28,9 @@
     padding: 65px 65px 270px;
     font-size: 24px;
     line-height: 40px;
+  }
+
+  &.style-01 {
     margin-bottom: 0;
   }
 
@@ -108,6 +111,34 @@
 
     @include media('screen', '>=wider') {
       padding: 60px 96px 0 55px;
+    }
+  }
+
+  .img {
+    padding-top: 30px;
+  }
+
+  .form-holder {
+
+    @include media('screen', '>=tablet') {
+      max-width: 500px;
+      margin-left: auto;
+    }
+
+    .input {
+      margin-bottom: 20px;
+    }
+
+    input {
+      margin-bottom: 0;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    .sm-text {
+      max-width: none;
     }
   }
 }

@@ -2222,7 +2222,7 @@ var test = function test() {
       input.closest('form').removeClass('invalid');
     }
   });
-  $('#hero-form, .js-demo-form').submit(function (e) {
+  $('#hero-form').submit(function (e) {
     if ($(this).hasClass("invalid")) {
       e.preventDefault();
       return false;

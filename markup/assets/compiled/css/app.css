@@ -2711,8 +2711,10 @@ hr {
     padding: 65px 65px 270px;
     font-size: 24px;
     line-height: 40px;
-    margin-bottom: 0;
   }
+}
+.banner.style-01 {
+  margin-bottom: 0;
 }
 .banner:after {
   position: absolute;
@@ -2797,6 +2799,27 @@ hr {
   .banner .img-hold {
     padding: 60px 96px 0 55px;
   }
+}
+.banner .img {
+  padding-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .banner .form-holder {
+    max-width: 500px;
+    margin-left: auto;
+  }
+}
+.banner .form-holder .input {
+  margin-bottom: 20px;
+}
+.banner .form-holder input {
+  margin-bottom: 0;
+}
+.banner .form-holder button {
+  width: 100%;
+}
+.banner .form-holder .sm-text {
+  max-width: none;
 }
 
 /*# sourceMappingURL=app.css.map*/

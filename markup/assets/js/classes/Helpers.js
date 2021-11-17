@@ -139,7 +139,7 @@ export const test = () => {
     }
   })
 
-  $('#hero-form, .js-demo-form').submit(function (e) {
+  $('#hero-form').submit(function (e) {
     if ($(this).hasClass("invalid")) {
        e.preventDefault()
       return false;
