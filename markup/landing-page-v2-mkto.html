@@ -1,9 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Marketo Variables start -->
+  <meta class="mktoString" id="pageTitle" mktoName="Page Title" default="Segment | #1 CDP to Manage Customer Data">
+  <meta class="mktoColor" id="bodyBackgroundColor" mktoName="Body: BG Color" default="#f7f8fc">
+
+  <meta class="mktoColor" id="headerBackgroundColor" mktoName="Header: BG Color" default="#1C0732">
+  <meta class="mktoBoolean" id="showHeader" mktoName="Header?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showHeader_rightContent" mktoName="Header: Right Content?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+  <meta class="mktoBoolean" id="showNav_item01" mktoName="Header: Nav Item 1?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="nav_item01" mktoName="Header: Nav Item 1: Text" default="Product">
+  <meta class="mktoBoolean" id="showNav_item02" mktoName="Header: Nav Item 2?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="nav_item02" mktoName="Header: Nav Item 2: Text" default="Pricing">
+  <meta class="mktoString" id="nav_item02Link" mktoName="Header: Nav Item 2: Link" default="https://segment.com/pricing">
+  <meta class="mktoBoolean" id="showNav_item03" mktoName="Header: Nav Item 3?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="nav_item03" mktoName="Header: Nav Item 3: Text" default="Customers">
+  <meta class="mktoBoolean" id="showNav_item04" mktoName="Header: Nav Item 4?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="nav_item04" mktoName="Header: Nav Item 4: Text" default="Docs">
+  <meta class="mktoBoolean" id="showNav_item05" mktoName="Header: Nav Item 5?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="nav_item05" mktoName="Header: Nav Item 5: Text" default="Company">
+
+  <meta class="mktoString" id="headerLogin_link" mktoName="Header Login Link" default="https://app.segment.com/login/">
+  <meta class="mktoString" id="headerLogin_text" mktoName="Header Login Text" default="Log in">
+  <meta class="mktoString" id="headerButton_link" mktoName="Header Button Link" default="https://app.segment.com/signup/">
+  <meta class="mktoString" id="headerButton_text" mktoName="Header Button Text" default="Sign up">
+
+  <meta class="mktoColor" id="heroBackgroundColorGradient01" mktoName="Hero Gradient 1" default="#1C0732">
+  <meta class="mktoColor" id="heroBackgroundColorGradient02" mktoName="Hero Gradient 2" default="#1d0833">
+  <meta class="mktoBoolean" id="showHero" mktoName="Hero?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showHero_image" mktoName="Hero: Image?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showHero_leftContent" mktoName="Hero: Text Block?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showHero_title" mktoName="Hero: Title?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showHero_rightContent" mktoName="Hero: Right Content?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showHeroBottomContent" mktoName="Hero: Bottom Content?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="heroButton_text" mktoName="Hero Button Text" default="Schedule a demo">
+
+  <meta class="mktoBoolean" id="showAgendaSection" mktoName="Agenda Section?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showAgendaSection_leftContent" mktoName="Agenda Section: Text Block?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showAgendaSection_rightContent" mktoName="Agenda Section: Image ?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+  <meta class="mktoBoolean" id="showFooter" mktoName="Footer?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoColor" id="footerBackgroundColor" mktoName="Footer: BG Color" default="#1C0732">
+  <meta class="mktoBoolean" id="showLogoSection" mktoName="Logo Section?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_01" mktoName="Logos: Logo 01?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_02" mktoName="Logos: Logo 02?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_03" mktoName="Logos: Logo 03?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_04" mktoName="Logos: Logo 04?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_05" mktoName="Logos: Logo 05?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_06" mktoName="Logos: Logo 06?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_07" mktoName="Logos: Logo 07?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_08" mktoName="Logos: Logo 08?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_09" mktoName="Logos: Logo 09?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_10" mktoName="Logos: Logo 10?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_11" mktoName="Logos: Logo 11?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_12" mktoName="Logos: Logo 12?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_13" mktoName="Logos: Logo 13?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_14" mktoName="Logos: Logo 14?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_15" mktoName="Logos: Logo 15?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_16" mktoName="Logos: Logo 16?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_17" mktoName="Logos: Logo 17?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_18" mktoName="Logos: Logo 18?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_19" mktoName="Logos: Logo 19?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_20" mktoName="Logos: Logo 20?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_21" mktoName="Logos: Logo 21?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_22" mktoName="Logos: Logo 22?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_23" mktoName="Logos: Logo 23?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_24" mktoName="Logos: Logo 24?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_25" mktoName="Logos: Logo 25?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_26" mktoName="Logos: Logo 26?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_27" mktoName="Logos: Logo 27?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLogo_28" mktoName="Logos: Logo 28?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+  <meta class="mktoBoolean" id="showFooter_middleBlock" mktoName="Footer: Middle Block?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showFooter_logo" mktoName="Footer: Logo?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showFooter_form" mktoName="Footer: Form?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showLink" mktoName="Link?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="footer_link" mktoName="Footer Create A/C Link" default="https://app.segment.com/signup/">
+  <meta class="mktoString" id="footer_text" mktoName="Footer Create A/C Text" default="Create free account">
+  <meta class="mktoString" id="footerButton_text" mktoName="Footer Button Text" default="Get a demo">
+
+  <meta class="mktoBoolean" id="showFooter_nav" mktoName="Footer Nav?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showFooter_navProducts" mktoName="Footer: Products?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showFooter_navDevelopers" mktoName="Footer: Developers?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showFooter_navCompany" mktoName="Footer: Company?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="showFooter_navSupport" mktoName="Footer: Support?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+  <meta class="mktoString" id="linkedin-profile_link" mktoName="LinkedIn profile Link" default="https://www.linkedin.com/company/segment-io">
+  <meta class="mktoString" id="twitter-profile_link" mktoName="Twitter profile Link" default="https://twitter.com/segment">
+  <meta class="mktoString" id="github-profile_link" mktoName="Github profile Link" default="https://github.com/segmentio">
+
+  <meta class="mktoString" id="customHTML" mktoName="Custom HTML" default="" allowHTMl="true">
+  <meta class="mktoString" id="customCSS" mktoName="Custom CSS" default="" allowCSS="true">
+  <!-- Marketo Variables end -->
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Segment | #1 CDP to Manage Customer Data</title>
+  <title>${pageTitle}</title>
   <link rel="apple-touch-icon" sizes="57x57" href="https://gopages.segment.com/rs/667-MPQ-382/images/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="https://gopages.segment.com/rs/667-MPQ-382/images/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="https://gopages.segment.com/rs/667-MPQ-382/images/apple-icon-72x72.png">
@@ -19,14 +113,21 @@
   <meta name="msapplication-TileImage" content="https://gopages.segment.com/rs/667-MPQ-382/images/ms-icon-144x144.png">
   <meta name="msapplication-TileColor" content="#F1FAF6">
   <meta name="theme-color" content="#ffffff">
-  <!-- <link rel="stylesheet" href="https://gopages.segment.com/rs/667-MPQ-382/images/app--10-07-021.css"> -->
-  <link rel="stylesheet" href="assets/compiled/css/app.css">
+  <link rel="stylesheet" href="https://gopages.segment.com/rs/667-MPQ-382/images/app--10-07-021.css">
+
+  <style>
+    body { background-color: ${bodyBackgroundColor}; }
+    #header { background-color: ${headerBackgroundColor}; }
+    .banner { background-image: linear-gradient(to bottom, ${heroBackgroundColorGradient01} 0%, ${heroBackgroundColorGradient02} 100%);}
+    #footer { background: ${footerBackgroundColor}; }
+  </style>
+  ${customCSS}
 </head>
 <body>
   <div id="wrapper">
     <header id="header">
       <div class="container">
-        <div class="logo">
+        <div class="logo mktoText" id="header_logo" mktoname="Header: Logo">
           <a href="https://segment.com/">
             <img class="white-logo" src="https://gopages.segment.com/rs/667-MPQ-382/images/logo.svg" alt="segment">
             <img class="black-logo" src="https://gopages.segment.com/rs/667-MPQ-382/images/logo-black.svg" alt="segment">
@@ -37,9 +138,9 @@
           <div class="wrap">
             <nav id="nav">
               <ul class="navigation">
-                <li>
-                  <a href="#"><span>Product</span></a>
-                  <div class="drop-down">
+                <li style="display: ${showNav_item01};">
+                  <a href="#"><span>${nav_item01}</span></a>
+                  <div class="drop-down mktoText" id="navItem_oneDrop" mktoName="Header: Nav Item 1: Drop">
                     <span class="go-back">Product</span>
                     <div class="inner">
                       <div class="col">
@@ -196,10 +297,10 @@
                     </div>
                   </div>
                 </li>
-                <li><a href="https://segment.com/pricing"><span>Pricing</span></a></li>
-                <li>
-                  <a href="#"><span>Customers</span></a>
-                  <div class="drop-down drop-small">
+                <li style="display: ${showNav_item02};"><a href="${nav_item02Link}"><span>${nav_item02}</span></a></li>
+                <li style="display: ${showNav_item03};">
+                  <a href="#"><span>${nav_item03}</span></a>
+                  <div class="drop-down drop-small mktoText" id="navItem_twoDrop" mktoName="Header: Nav Item 2: Drop">
                     <span class="go-back">Customers</span>
                     <div class="inner">
                       <div class="col">
@@ -302,9 +403,9 @@
                     </div>
                   </div>
                 </li>
-                <li>
-                  <a href="#"><span>Docs</span></a>
-                  <div class="drop-down drop-medium">
+                <li style="display: ${showNav_item04};">
+                  <a href="#"><span>${nav_item04}</span></a>
+                  <div class="drop-down drop-medium mktoText" id="navItem_threeDrop" mktoName="Header: Nav Item 3: Drop">
                     <span class="go-back">Docs</span>
                     <div class="inner">
                       <div class="col">
@@ -458,9 +559,9 @@
                     </div>
                   </div>
                 </li>
-                <li>
-                  <a href="#"><span>Company</span></a>
-                  <div class="drop-down drop-medium">
+                <li style="display: ${showNav_item05};">
+                  <a href="#"><span>${nav_item05}</span></a>
+                  <div class="drop-down drop-medium mktoText" id="navItem_fourDrop" mktoName="Header: Nav Item 4: Drop">
                     <span class="go-back">Company</span>
                     <div class="inner">
                       <div class="col">
@@ -613,43 +714,53 @@
                 </li>
               </ul>
             </nav>
-            <ul class="header-r">
-              <li><a class="white-link" href="https://app.segment.com/login/">Log in</a></li>
-              <li><a href="https://app.segment.com/signup/" class="btn">Sign up</a></li>
-            </ul>
+            <div style="display: ${showHeader_rightContent};">
+              <ul class="header-r">
+                <li><a class="white-link" href="${headerLogin_link}">${headerLogin_text}</a></li>
+                <li><a href="${headerButton_link}" class="btn">${headerButton_text}</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </header>
     <main role="main" id="main">
-      <div class="banner">
+      <div class="banner style-01" style="display: ${showHero};">
         <div class="container">
           <div class="row">
-            <div class="col-sm-7 col-lg-5">
-              <div class="title">OVERLINE COPY</div>
-              <h1>This is H1 copy, main headline on the page</h1>
-              <p>This is paragraph copy, or referred to as Description Text which pairs with the H1 above.</p>
-              <div class="form">
-                <form action="#">
-                  <input type="email" placeholder="Your work email">
-                  <button class="btn" type="submit" value="Call to action">Call to action</button>
-                </form>
+            <div class="col-sm-6 col-lg-5" style="display: ${showHero_leftContent};">
+              <div class="title" style="display: ${showHero_title};"><div class="mktoText" id="hero_title" mktoname="Hero: Title">OVERLINE COPY</div></div>
+              <div class="mktoText" id="hero_leftContent" mktoname="Hero: Left Content">
+                <h1>This is H1 copy, main headline on the page</h1>
+                <p>This is paragraph copy, or referred to as Description Text which pairs with the H1 above.</p>
               </div>
-              <div class="sm-text">
-                <p>By requesting a demo you agree to Segment's <a href="https://segment.com/legal/privacy/">Privacy Policy</a>, and you consent to receive marketing communications, including automated text messages, from Segment.</p>
-              </div>
+              <div class="img mktoText" id="hero_image" mktoname="Hero: Image" style="display: ${showHero_image};"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/img05--10-07-021.png" alt="image description"></div>
             </div>
-            <div class="col-sm-5 col-lg-7">
-              <div class="img-hold"><img src="assets/images/img01--10-07-021.png" alt="image description"></div>
+            <div class="col-sm-6 col-lg-7" style="display: ${showHero_rightContent};">
+              <div class="form-holder">
+                <form action="#">
+                  <div class="input"><input type="text" placeholder="First Name"></div>
+                  <div class="input"><input type="text" placeholder="Last Name"></div>
+                  <div class="input"><input type="email" placeholder="Email"></div>
+                  <div class="input"><input type="text" placeholder="Company Name"></div>
+                  <div class="input"><input type="tel" placeholder="Phone Number"></div>
+                  <div class="input"><button class="btn" type="submit" value="Schedule a demo">${heroButton_text}</button></div>
+                </form>
+                <div class="sm-text" style="display: ${showHeroBottomContent};">
+                  <div class="mktoText" id="hero_bottomContent" mktoname="Hero: Bottom Content">
+                    <p>By requesting a demo you agree to Segment's <a href="https://segment.com/legal/privacy/">Privacy Policy</a>, and you consent to receive marketing communications, including automated text messages, from Segment.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="content-section">
+      <div class="content-section" style="display: ${showAgendaSection};">
         <div class="container">
           <div class="row row-reverse-md align-center">
-            <div class="col-sm-6 col-lg-5">
-              <div class="content">
+            <div class="col-sm-6 col-lg-5" style="display: ${showAgendaSection_rightContent};">
+              <div class="content mktoText" id="AgendaSection_rightContent" mktoname="Agenda: Content">
                 <h2>In this report, <br> you’ll learn...</h2>
                 <ul>
                   <li>List formatted copy</li>
@@ -660,79 +771,73 @@
                 </ul>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-7">
-              <div class="img-hold"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/img02.png" alt="image description"></div>
+            <div class="col-sm-6 col-lg-7" style="display: ${showAgendaSection_leftContent};">
+              <div class="img-hold mktoText" id="AgendaSection_leftContent" mktoname="Agenda: Image"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/img02.png" alt="image description"></div>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <div class="container">
-
-<form class="e-ti75j2 egp83vz0" novalidate="" data-hook="demoFormContainer"><div class="e-j3i0cm egp83vz4"><div type="email" class="e-13zq1wb edsp50u9"><div class="e-bjn8wh edsp50u7"><input type="email" name="email" id="demo" placeholder="Your work email" value="" aria-invalid="false" aria-describedby="email-message" aria-label="work email" class="egp83vz2 e-1p36wac edsp50u2"></div><div class="e-1je0p3a edsp50u1" style="opacity:0;transform:translateY(5px) translateZ(0)"></div></div><button class="egp83vz3 e-1xk477 e64p6bg1"><span>See how it works</span></button></div></form>
-
-
-    </div>
-    <footer id="footer">
-      <div class="footer-top">
+    <footer id="footer" style="display: ${showFooter};">
+      <div class="footer-top" style="display: ${showLogoSection};">
         <div class="inner">
           <div class="logo-list">
             <ul>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon01.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon02.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon03.svg" alt="hubspot"></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon04.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon05.svg" alt="twitter"></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon06.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon07.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon08.svg" alt="salesforce"></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon09.svg" alt="facebook"></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon10.svg" alt="stripe"></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon11.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon12.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon13.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon14.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon15.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon16.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon17.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon18.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon19.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon20.svg" alt="js"></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon21.svg" alt="apple"></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon22.svg" alt="anodriod"></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon23.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon24.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon25.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon26.svg" alt="ibm"></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon27.svg" alt=""></span></li>
-              <li><span><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon28.svg" alt="go"></span></li>
+              <li style="display: ${showLogo_01};"><span class="mktoText" id="logos_01" mktoname="Logos: Logo 1"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon01.svg" alt="Heap"></span></li>
+              <li style="display: ${showLogo_02};"><span class="mktoText" id="logos_02" mktoname="Logos: Logo 2"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon02.svg" alt="ZendeskMono"></span></li>
+              <li style="display: ${showLogo_03};"><span class="mktoText" id="logos_03" mktoname="Logos: Logo 3"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon03.svg" alt="hubspot"></span></li>
+              <li style="display: ${showLogo_04};"><span class="mktoText" id="logos_04" mktoname="Logos: Logo 4"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon04.svg" alt="Intercom"></span></li>
+              <li style="display: ${showLogo_05};"><span class="mktoText" id="logos_05" mktoname="Logos: Logo 5"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon05.svg" alt="twitter"></span></li>
+              <li style="display: ${showLogo_06};"><span class="mktoText" id="logos_06" mktoname="Logos: Logo 6"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon06.svg" alt="GoogleAnalytics"></span></li>
+              <li style="display: ${showLogo_07};"><span class="mktoText" id="logos_07" mktoname="Logos: Logo 7"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon07.svg" alt="Twilio"></span></li>
+              <li style="display: ${showLogo_08};"><span class="mktoText" id="logos_08" mktoname="Logos: Logo 8"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon08.svg" alt="SalesforceMarketingCloud"></span></li>
+              <li style="display: ${showLogo_09};"><span class="mktoText" id="logos_09" mktoname="Logos: Logo 9"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon09.svg" alt="Facebook"></span></li>
+              <li style="display: ${showLogo_10};"><span class="mktoText" id="logos_10" mktoname="Logos: Logo 10"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon10.svg" alt="StripeMono"></span></li>
+              <li style="display: ${showLogo_11};"><span class="mktoText" id="logos_11" mktoname="Logos: Logo 11"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon11.svg" alt="Amplitude"></span></li>
+              <li style="display: ${showLogo_12};"><span class="mktoText" id="logos_12" mktoname="Logos: Logo 12"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon12.svg" alt="Marketo"></span></li>
+              <li style="display: ${showLogo_13};"><span class="mktoText" id="logos_13" mktoname="Logos: Logo 13"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon13.svg" alt="BrazeMono"></span></li>
+              <li style="display: ${showLogo_14};"><span class="mktoText" id="logos_14" mktoname="Logos: Logo 14"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon14.svg" alt="AppcuesMono"></span></li>
+              <li style="display: ${showLogo_15};"><span class="mktoText" id="logos_15" mktoname="Logos: Logo 15"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon15.svg" alt="Kinesis"></span></li>
+              <li style="display: ${showLogo_16};"><span class="mktoText" id="logos_16" mktoname="Logos: Logo 16"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon16.svg" alt="RocksDb"></span></li>
+              <li style="display: ${showLogo_17};"><span class="mktoText" id="logos_17" mktoname="Logos: Logo 17"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon17.svg" alt="Airtable"></span></li>
+              <li style="display: ${showLogo_18};"><span class="mktoText" id="logos_18" mktoname="Logos: Logo 18"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon18.svg" alt="Python"></span></li>
+              <li style="display: ${showLogo_19};"><span class="mktoText" id="logos_19" mktoname="Logos: Logo 19"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon19.svg" alt="RedshiftMono"></span></li>
+              <li style="display: ${showLogo_20};"><span class="mktoText" id="logos_20" mktoname="Logos: Logo 20"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon20.svg" alt="NodeJs"></span></li>
+              <li style="display: ${showLogo_21};"><span class="mktoText" id="logos_21" mktoname="Logos: Logo 21"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon21.svg" alt="Ios"></span></li>
+              <li style="display: ${showLogo_22};"><span class="mktoText" id="logos_22" mktoname="Logos: Logo 22"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon22.svg" alt="Android"></span></li>
+              <li style="display: ${showLogo_23};"><span class="mktoText" id="logos_23" mktoname="Logos: Logo 23"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon23.svg" alt="PostgresSql"></span></li>
+              <li style="display: ${showLogo_24};"><span class="mktoText" id="logos_24" mktoname="Logos: Logo 24"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon24.svg" alt="Showflake"></span></li>
+              <li style="display: ${showLogo_25};"><span class="mktoText" id="logos_25" mktoname="Logos: Logo 25"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon25.svg" alt="Ruby"></span></li>
+              <li style="display: ${showLogo_26};"><span class="mktoText" id="logos_26" mktoname="Logos: Logo 26"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon26.svg" alt="Ibm"></span></li>
+              <li style="display: ${showLogo_27};"><span class="mktoText" id="logos_27" mktoname="Logos: Logo 27"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon27.svg" alt="BigQuery"></span></li>
+              <li style="display: ${showLogo_28};"><span class="mktoText" id="logos_28" mktoname="Logos: Logo 28"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/icon28.svg" alt="Go"></span></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="footer-m">
-        <div class="container">
+        <div class="container" style="display:${showFooter_middleBlock}">
           <div class="row">
-            <div class="col-sm-6"><div class="logo"><a href="https://segment.com/"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/logo.svg" alt="segment"></a></div></div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" style="display: ${showFooter_logo};"><div class="logo mktoText" id="footer_logo" mktoname="Footer: Logo"><a href="https://segment.com/"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/logo.svg" alt="segment"></a></div></div>
+            <div class="col-sm-6" style="display: ${showFooter_form};">
               <div class="content-r">
-                <div class="form">
+                <div class="form" style="${showFooter_form}">
                   <form action="#">
                     <input type="email" placeholder="Your work email">
-                    <button class="btn" type="submit" value="Get a demo">Get a demo</button>
+                    <button class="btn" type="submit" value="Get a demo">${footerButton_text}</button>
                   </form>
                 </div>
-                <div class="link-holder"><a class="link" href="https://app.segment.com/signup/">Create free account <img aria-hidden="true" src="https://gopages.segment.com/rs/667-MPQ-382/images/arrow-right.svg" alt="arrow"></a></div>
+                <div class="link-holder" style="display: ${showLink};"><a class="link" href="${footer_link}"><span>${footer_text}</span> <img aria-hidden="true" src="https://gopages.segment.com/rs/667-MPQ-382/images/arrow-right.svg" alt="arrow"></a></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="container f-nav-item">
+        <div class="container f-nav-item" style="display: ${showFooter_nav};">
           <div class="row">
-            <div class="col-xls-6 col-sm-3">
-              <strong class="title">Products</strong>
+            <div class="col-xls-6 col-sm-3" style="display: ${showFooter_navProducts};">
+              <strong class="title mktoText" id="footerNav_title01" mktoname="Footer: Nav Title 01">Products</strong>
               <div class="footer-nav">
-                <ul>
+                <ul class="mktoText" id="footerProducts_navItems" mktoname="Footer: Products Nav Items">
                   <li><a href="https://segment.com/product/connections/">Connections</a></li>
                   <li><a href="https://segment.com/product/protocols/">Protocols</a></li>
                   <li><a href="https://segment.com/product/personas/">Personas</a></li>
@@ -744,10 +849,10 @@
                 </ul>
               </div>
             </div>
-            <div class="col-xls-6 col-sm-3">
-              <strong class="title">For Developers</strong>
+            <div class="col-xls-6 col-sm-3" style="display: ${showFooter_navDevelopers};">
+              <strong class="title mktoText" id="footerNav_title02" mktoname="Footer: Nav Title 02">For Developers</strong>
               <div class="footer-nav">
-                <ul>
+                <ul class="mktoText" id="footerDevelopers_navItems" mktoname="Footer: Developers Nav Items">
                   <li><a href="https://segment.com/docs/">Documentation</a></li>
                   <li><a href="https://segment.com/docs/config-api/">Segment API</a></li>
                   <li><a href="https://segment.com/partners/developer-center/">Build on Segment</a></li>
@@ -756,10 +861,10 @@
                 </ul>
               </div>
             </div>
-            <div class="col-xls-6 col-sm-3">
-              <strong class="title">Company</strong>
+            <div class="col-xls-6 col-sm-3" style="display: ${showFooter_navCompany};">
+              <strong class="title mktoText" id="footerNav_title03" mktoname="Footer: Nav Title 03">Company</strong>
               <div class="footer-nav">
-                <ul>
+                <ul class="mktoText" id="footerCompany_navItems" mktoname="Footer: Company Nav Items">
                   <li><a href="https://www.twilio.com/company/jobs">Careers</a></li>
                   <li><a href="https://segment.com/blog/">Blog</a></li>
                   <li><a href="https://segment.com/newsroom/">Press</a></li>
@@ -770,10 +875,10 @@
                 </ul>
               </div>
             </div>
-            <div class="col-xls-6 col-sm-3">
-              <strong class="title">Support</strong>
+            <div class="col-xls-6 col-sm-3" style="display: ${showFooter_navSupport};">
+              <strong class="title mktoText" id="footerNav_title04" mktoname="Footer: Nav Title 04">Support</strong>
               <div class="footer-nav">
-                <ul>
+                <ul class="mktoText" id="footerSupport_navItems" mktoname="Footer: Support Nav Items">
                   <li><a href="https://segment.com/help/">Help center</a></li>
                   <li><a href="https://segment.com/contact/">Contact us</a></li>
                   <li><a href="https://segment.com/resources/">Resources</a></li>
@@ -793,7 +898,7 @@
         <div class="container">
           <div class="row">
             <div class="f-nav">
-              <ul>
+              <ul class="mktoText" id="footer_subNav" mktoname="Footer: Sub Nav Items">
                 <li>&copy; Segment.io, Inc.</li>
                 <li><a href="https://segment.com/legal/privacy/">Privacy policy</a></li>
                 <li><a href="https://segment.com/legal/terms/">Terms of Service</a></li>
@@ -802,17 +907,17 @@
             </div>
             <ul class="social-networks">
               <li>
-                <a href="https://www.linkedin.com/company/segment-io">
+                <a href="${linkedin-profile_link}">
                   <svg aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M1.14 0h13.717A1.15 1.15 0 0116 1.154v13.692A1.15 1.15 0 0114.857 16H1.14C.511 16 0 15.482 0 14.846V1.154C0 .518.51 0 1.14 0zm1.324 13.714H4.84V6.08H2.464v7.635-.001zM3.65 5.035a1.376 1.376 0 010-2.75c.757 0 1.375.618 1.375 1.375 0 .76-.614 1.375-1.375 1.375zm7.704 8.679h2.371V9.528c0-2.057-.447-3.64-2.846-3.64-1.154 0-1.93.633-2.247 1.233H8.6V6.078H6.325v7.636h2.371V9.935c0-.996.19-1.96 1.425-1.96 1.215 0 1.232 1.139 1.232 2.024v3.715h.001z"></path></svg>
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/segment">
+                <a href="${twitter-profile_link}">
                   <svg aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14.355 4.74c.01.142.01.284.01.426 0 4.337-3.299 9.334-9.33 9.334A9.264 9.264 0 010 13.027c.264.03.518.041.792.041a6.566 6.566 0 004.071-1.402 3.285 3.285 0 01-3.066-2.275c.203.03.406.051.62.051.294 0 .588-.04.862-.112A3.28 3.28 0 01.65 6.11v-.04c.437.244.945.396 1.483.417A3.278 3.278 0 01.67 3.755c0-.61.162-1.168.447-1.656a9.32 9.32 0 006.761 3.433c-.053-.247-.08-.5-.081-.752a3.278 3.278 0 013.28-3.28 3.27 3.27 0 012.395 1.036 6.456 6.456 0 002.081-.792 3.27 3.27 0 01-1.441 1.808c.66-.071 1.3-.254 1.888-.508a7.05 7.05 0 01-1.645 1.696z"></path></svg>
                 </a>
               </li>
               <li>
-                <a href="https://github.com/segmentio">
+                <a href="${github-profile_link}">
                   <svg aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M0 8.073C0 3.483 3.423 0 7.897 0S16 3.484 16 8.073c0 3.669-2.187 6.809-5.413 7.907-.41.076-.558-.185-.558-.4l.002-.583c.003-.571.008-1.437.008-2.183 0-.778-.252-1.274-.549-1.535 1.803-.209 3.704-.464 3.704-3.656 0-.907-.317-1.363-.833-1.949.084-.215.358-1.098-.084-2.246-.674-.219-2.225.893-2.225.893A7.457 7.457 0 006 4.32s-1.552-1.107-2.226-.892c-.442 1.144-.168 2.031-.084 2.246-.516.582-.761 1.039-.761 1.949 0 3.183 1.82 3.45 3.623 3.656-.233.218-.442.585-.517 1.114-.46.219-1.645.586-2.351-.69-.442-.788-1.245-.854-1.245-.854-.79-.01-.052.509-.052.509.53.248.897 1.21.897 1.21.474 1.483 2.732.987 2.732.987 0 .677.004 1.354.01 2.031 0 .215-.145.477-.558.4C2.252 14.883 0 11.742 0 8.073zm4.487 4.823c-.097-.02-.161-.096-.139-.162.023-.066.116-.1.2-.076.097.03.158.106.14.172-.02.066-.117.1-.2.066h-.001zm.697.106c.093 0 .168-.053.168-.12 0-.075-.084-.128-.181-.118-.094 0-.168.053-.168.119 0 .076.074.129.18.119h.001zm.59-.324c-.093.023-.158.086-.148.162.01.066.094.11.19.086.094-.023.158-.086.149-.152-.01-.063-.097-.106-.19-.096h-.001zM3.135 11.41c-.041.034-.032.11.023.172.052.053.126.076.168.034.042-.034.032-.11-.023-.173-.051-.053-.126-.076-.168-.033zm-.274-.14c-.064-.032-.097-.085-.074-.128.023-.033.074-.043.139-.023.064.033.097.086.074.129-.023.046-.087.056-.139.023v-.001zm.971 1.05c-.051.042-.032.142.042.204.074.076.168.086.21.034.042-.043.022-.143-.042-.206-.071-.076-.168-.086-.21-.033v.001zm-.367-.292c-.052-.076-.052-.162 0-.195.051-.043.135-.01.18.066.052.076.052.162 0 .205-.042.033-.129 0-.18-.076z"></path></svg>
                 </a>
               </li>
@@ -822,12 +927,7 @@
       </div>
     </footer>
   </div>
-  <!-- <script src="https://gopages.segment.com/rs/667-MPQ-382/images/app--10-07-021.js"></script> -->
-  <script src="https://segment.com/_next/static/chunks/pages/index-d7884b5d786efc65.js"></script>
-<!--   <script src="https://segment.com/_next/static/chunks/3991-71f8ecc076c54dc4.js"></script>
-  <script src="https://segment.com/_next/static/chunks/8051-15a760edcf369269.js"></script> -->
-  <script src="https://segment.com/_next/static/chunks/7791-d5398dd519cdde29.js"></script>
-  <!-- <script src="https://segment.com/_next/static/chunks/pages/index-d7884b5d786efc65.js"></script> -->
-  <script src="assets/compiled/js/app.js"></script>
+  <script src="https://gopages.segment.com/rs/667-MPQ-382/images/app--10-07-021.js"></script>
+  ${customHTML}
 </body>
 </html>
