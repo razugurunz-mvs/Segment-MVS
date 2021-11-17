@@ -738,12 +738,12 @@
             </div>
             <div class="col-sm-6 col-lg-7" style="display: ${showHero_rightContent};">
               <div class="form-holder">
-                <form action="#">
-                  <div class="input"><input type="text" placeholder="First Name"></div>
-                  <div class="input"><input type="text" placeholder="Last Name"></div>
-                  <div class="input"><input type="email" placeholder="Email"></div>
-                  <div class="input"><input type="text" placeholder="Company Name"></div>
-                  <div class="input"><input type="tel" placeholder="Phone Number"></div>
+                <form action="#" id="hero-form">
+                  <div class="input"><input type="text" placeholder="First Name" required=""></div>
+                  <div class="input"><input type="text" placeholder="Last Name" required=""></div>
+                  <div class="input"><input type="email" placeholder="Email" required=""></div>
+                  <div class="input"><input type="text" placeholder="Company Name" required=""></div>
+                  <div class="input"><input type="tel" placeholder="Phone Number" required=""></div>
                   <div class="input"><button class="btn" type="submit" value="Schedule a demo">${heroButton_text}</button></div>
                 </form>
                 <div class="sm-text" style="display: ${showHeroBottomContent};">
@@ -927,7 +927,8 @@
       </div>
     </footer>
   </div>
-  <script src="https://gopages.segment.com/rs/667-MPQ-382/images/app--10-07-021.js"></script>
+  <!-- <script src="https://gopages.segment.com/rs/667-MPQ-382/images/app--10-07-021.js"></script> -->
+  <script src="assets/compiled/js/app.js"></script>
   ${customHTML}
 </body>
 </html>

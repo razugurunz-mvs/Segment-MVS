@@ -128,7 +128,7 @@ export const HeaderFixed = () => {
 }
 
 export const test = () => {
-  var input = $("#hero-form input[type='email']")
+  var input = $("#hero-form input[type='email'], .js-custom-forms-newsletter input[type='email']")
 
   $("input[type='email']").on('keyup change', function (e) {
     let regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -139,7 +139,7 @@ export const test = () => {
     }
   })
 
-  $('#hero-form').submit(function (e) {
+  $('#hero-form, .js-demo-form, .js-custom-forms-newsletter').submit(function (e) {
     if ($(this).hasClass("invalid")) {
        e.preventDefault()
       return false;
@@ -147,6 +147,7 @@ export const test = () => {
     const currentInput = $(this).find("input[type='email']")
 
     if (currentInput.val() === '') {
+        input.closest('form').addClass('invalid')
       return
     }
 

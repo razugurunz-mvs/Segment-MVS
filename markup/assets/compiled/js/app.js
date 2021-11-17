@@ -2212,7 +2212,7 @@ var HeaderFixed = function HeaderFixed() {
   });
 };
 var test = function test() {
-  var input = $("#hero-form input[type='email']");
+  var input = $("#hero-form input[type='email'], .js-custom-forms-newsletter input[type='email']");
   $("input[type='email']").on('keyup change', function (e) {
     var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -2222,7 +2222,7 @@ var test = function test() {
       input.closest('form').removeClass('invalid');
     }
   });
-  $('#hero-form').submit(function (e) {
+  $('#hero-form, .js-demo-form, .js-custom-forms-newsletter').submit(function (e) {
     if ($(this).hasClass("invalid")) {
       e.preventDefault();
       return false;
@@ -2231,6 +2231,7 @@ var test = function test() {
     var currentInput = $(this).find("input[type='email']");
 
     if (currentInput.val() === '') {
+      input.closest('form').addClass('invalid');
       return;
     }
 
