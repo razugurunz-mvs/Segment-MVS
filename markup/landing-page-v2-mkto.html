@@ -738,14 +738,8 @@
             </div>
             <div class="col-sm-6 col-lg-7" style="display: ${showHero_rightContent};">
               <div class="form-holder">
-                <form action="#" id="hero-form">
-                  <div class="input"><input type="text" placeholder="First Name" required=""></div>
-                  <div class="input"><input type="text" placeholder="Last Name" required=""></div>
-                  <div class="input"><input type="email" placeholder="Email" required=""></div>
-                  <div class="input"><input type="text" placeholder="Company Name" required=""></div>
-                  <div class="input"><input type="tel" placeholder="Phone Number" required=""></div>
-                  <div class="input"><button class="btn" type="submit" value="Schedule a demo">${heroButton_text}</button></div>
-                </form>
+                <div class="mktoForm" id="long_form" mktoname="Long Form">
+                </div>
                 <div class="sm-text" style="display: ${showHeroBottomContent};">
                   <div class="mktoText" id="hero_bottomContent" mktoname="Hero: Bottom Content">
                     <p>By requesting a demo you agree to Segment's <a href="https://segment.com/legal/privacy/">Privacy Policy</a>, and you consent to receive marketing communications, including automated text messages, from Segment.</p>
@@ -822,10 +816,8 @@
             <div class="col-sm-6" style="display: ${showFooter_form};">
               <div class="content-r">
                 <div class="form" style="${showFooter_form}">
-                  <form action="#">
-                    <input type="email" placeholder="Your work email">
-                    <button class="btn" type="submit" value="Get a demo">${footerButton_text}</button>
-                  </form>
+                  <div class="mktoForm" id="footer_form" mktoname="Footer Form">
+                   </div>
                 </div>
                 <div class="link-holder" style="display: ${showLink};"><a class="link" href="${footer_link}"><span>${footer_text}</span> <img aria-hidden="true" src="https://gopages.segment.com/rs/667-MPQ-382/images/arrow-right.svg" alt="arrow"></a></div>
               </div>
@@ -927,8 +919,7 @@
       </div>
     </footer>
   </div>
-  <!-- <script src="https://gopages.segment.com/rs/667-MPQ-382/images/app--10-07-021.js"></script> -->
-  <script src="assets/compiled/js/app.js"></script>
+  <script src="https://gopages.segment.com/rs/667-MPQ-382/images/app--10-07-021.js"></script>
   ${customHTML}
 </body>
 </html>
