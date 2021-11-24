@@ -35,7 +35,6 @@
   <meta class="mktoBoolean" id="showHero_title" mktoName="Hero: Title?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="showHero_rightContent" mktoName="Hero: Right Content?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoBoolean" id="showHeroBottomContent" mktoName="Hero: Bottom Content?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
-  <meta class="mktoBoolean" id="showHero_form" mktoName="Hero: Form?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
   <meta class="mktoString" id="heroButton_text" mktoName="Hero Button Text" default="Schedule a demo">
 
   <meta class="mktoBoolean" id="showAgendaSection" mktoName="Agenda Section?" default="true" false_value="none !important" true_value="block" false_value_name="Hide" true_value_name="Show">
@@ -114,8 +113,7 @@
   <meta name="msapplication-TileImage" content="https://gopages.segment.com/rs/667-MPQ-382/images/ms-icon-144x144.png">
   <meta name="msapplication-TileColor" content="#F1FAF6">
   <meta name="theme-color" content="#ffffff">
-  <!-- <link rel="stylesheet" href="https://gopages.segment.com/rs/667-MPQ-382/images/app--10-07-021.css"> -->
-  <link rel="stylesheet" href="assets/compiled/css/app.css">
+  <link rel="stylesheet" href="https://gopages.segment.com/rs/667-MPQ-382/images/app--10-07-021.css">
 
   <style>
     body { background-color: ${bodyBackgroundColor}; }
@@ -729,29 +727,25 @@
     <main role="main" id="main">
       <div class="banner style-01" style="display: ${showHero};">
         <div class="container">
-          <div class="title" style="display: ${showHero_title};"><div class="mktoText" id="hero_title" mktoname="Hero: Title">OVERLINE COPY</div></div>
           <div class="row">
-            <div class="col-md-6 col-lg-5" style="display: ${showHero_leftContent};">
+            <div class="col-sm-6 col-lg-5" style="display: ${showHero_leftContent};">
+              <div class="title" style="display: ${showHero_title};"><div class="mktoText" id="hero_title" mktoname="Hero: Title">OVERLINE COPY</div></div>
               <div class="mktoText" id="hero_leftContent" mktoname="Hero: Left Content">
                 <h1>This is H1 copy, main headline on the page</h1>
                 <p>This is paragraph copy, or referred to as Description Text which pairs with the H1 above.</p>
               </div>
-
-              <div class="form-holder" style="display: ${showHero_form};">
-                <!-- <div class="mktoForm" id="long_form" mktoname="Long Form">
-                </div> -->
-                <script src="//gopages.segment.com/js/forms2/js/forms2.min.js"></script>
-<form id="mktoForm_1127"></form>
-<script>MktoForms2.loadForm("//gopages.segment.com", "667-MPQ-382", 1127);</script>
+              <div class="img mktoText" id="hero_image" mktoname="Hero: Image" style="display: ${showHero_image};"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/img05--10-07-021.png" alt="image description"></div>
+            </div>
+            <div class="col-sm-6 col-lg-7" style="display: ${showHero_rightContent};">
+              <div class="form-holder">
+                <div class="mktoForm" id="long_form" mktoname="Long Form">
+                </div>
                 <div class="sm-text" style="display: ${showHeroBottomContent};">
                   <div class="mktoText" id="hero_bottomContent" mktoname="Hero: Bottom Content">
                     <p>By requesting a demo you agree to Segment's <a href="https://segment.com/legal/privacy/">Privacy Policy</a>, and you consent to receive marketing communications, including automated text messages, from Segment.</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-7" style="display: ${showHero_rightContent};">
-               <div class="img mktoText" id="hero_image" mktoname="Hero: Image" style="display: ${showHero_image};"><img src="https://gopages.segment.com/rs/667-MPQ-382/images/img05--10-07-021.png" alt="image description"></div>
             </div>
           </div>
         </div>

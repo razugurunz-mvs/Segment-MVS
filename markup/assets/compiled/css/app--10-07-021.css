@@ -2941,7 +2941,14 @@ hr {
   }
 }
 .banner.style-01 {
-  margin-bottom: 0;
+  padding-bottom: 100px;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .banner.style-01 {
+    padding-bottom: 200px;
+    text-align: left;
+  }
 }
 .banner:after {
   position: absolute;
@@ -2991,8 +2998,12 @@ hr {
 }
 @media screen and (min-width: 992px) {
   .banner h1 {
-    font-size: 48px;
     margin-bottom: 28px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .banner h1 {
+    font-size: 48px;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -3028,21 +3039,32 @@ hr {
   }
 }
 .banner .img {
-  padding: 30px 0;
-  max-width: 300px;
+  padding-top: 30px;
+  max-width: 500px;
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .banner .img {
-    min-width: 300px;
-    padding-bottom: 0;
-    margin: 0;
+    max-width: 500px;
+    padding-left: 50px;
+    margin: 0 0 0 auto;
+    padding-top: 8px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
+  .banner .img {
+    padding-top: 13px;
+    max-width: 600px;
+  }
+}
+.banner .form-holder {
+  max-width: 420px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+@media screen and (min-width: 992px) {
   .banner .form-holder {
-    max-width: 500px;
-    margin-left: auto;
+    margin: 0;
   }
 }
 .banner .form-holder button {
