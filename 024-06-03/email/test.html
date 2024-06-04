@@ -1,0 +1,985 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+	<title>Twilio Segment</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="noindex,nofollow" />
+	<link rel='shortcut icon' href='https://segment.com/_next/static/images/favicon-96x96-21a939b7ca020e126d00d9c0a1d22112.png' type='image/x-icon' />
+	<style type="text/css">
+		@font-face {
+			font-family: 'Whitney';
+			src: url('onts/WhitneySSm/WhitneySSm-Light.woff2') format('woff2');
+			font-weight: 300;
+			font-style: normal;
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'Whitney';
+			src: url('fonts/WhitneySSm/WhitneySSm-Book.woff2') format('woff2');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'Whitney';
+			src: url('fonts/WhitneySSm/WhitneySSm-Medium.woff2') format('woff2');
+			font-weight: 500;
+			font-style: normal;
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'Whitney';
+			src: url('fonts/WhitneySSm/WhitneySSm-Semibold.woff2') format('woff2');
+			font-weight: 600;
+			font-style: normal;
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'Whitney';
+			src: url('fonts/WhitneySSm/WhitneySSm-Bold.woff2') format('woff2');
+			font-weight: 700;
+			font-style: normal;
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'Graphik';
+			src: url('fonts/Graphik/Graphik-Medium.woff2') format('woff2'),
+			url('fonts/Graphik/Graphik-Medium.woff') format('woff');
+			font-weight: 500;
+			font-style: normal;
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'Graphik';
+			src: url('fonts/Graphik/Graphik-MediumItalic.woff2') format('woff2'),
+			url('fonts/Graphik/Graphik-MediumItalic.woff') format('woff');
+			font-weight: 500;
+			font-style: italic;
+			font-display: swap;
+		}
+		a{
+			outline:none;
+			-webkit-transition:all 0.2s ease;
+			-moz-transition:all 0.2s ease;
+			-ms-transition:all 0.2s ease;
+			transition:all 0.2s ease;
+			text-decoration: underline;
+			color: #ed8c00;
+		}
+		a[x-apple-data-detectors]{color:inherit !important; text-decoration:none !important;}
+		a img{border:none;}
+		.btn {
+			-webkit-transition:all 0.3s ease;
+			-moz-transition:all 0.3s ease;
+			-ms-transition:all 0.3s ease;
+			transition:all 0.3s ease;
+		}
+		.btn:hover, a:hover { opacity: 0.8; }
+		table td{mso-line-height-rule:exactly;}
+		.ExternalClass, .ExternalClass a, .ExternalClass span, .ExternalClass b, .ExternalClass br, .ExternalClass p, .ExternalClass div{line-height:inherit;}
+		.hide-everywhere { display:none !important; width:0 !important; height:0 !important; padding:0 !important; font-size:0 !important; line-height:0 !important; }
+		.address { color: #e5e6e5 !important; background: none !important; text-decoration: none !important;}
+		.address span,
+		.address * { color: #e5e6e5 !important; text-decoration: none !important; border:none !important; background: none !important;}
+		u + div .address a {color: #e5e6e5 !important; text-decoration: none !important;}
+		img { max-width: 100%; height: auto; }
+		ul,
+		ol {
+			padding-left: 23px;
+			padding-top: 0;
+			padding-bottom: 0;
+			margin-top: 21px;
+			margin-bottom: 12px;
+		}
+		strong {font-weight: 600 !important;}
+		ul { list-style-type: disc; }
+		ul li,
+		ol li { padding-left: 0; margin-bottom: 10px; }
+		h1,h2,h3,h4,h5,h6 { font-family: 'Whitney', Arial, sans-serif; font-weight: 500 !important; padding-top: 0 !important; padding-bottom: 0 !important; margin-top: 0 !important; margin-bottom: 20px !important; }
+		p { padding-top: 0 !important; padding-bottom: 0 !important; margin-top: 0 !important; margin-bottom: 0 !important; }
+		p + p { margin-top: 25px !important;}
+		br {line-height: 8px;}
+		/* Styling for screen size 639 and less */
+		@media only screen and (max-width:639px) {
+			.flexible { width:100% !important; float: none !important; }
+			.table-center { float:none !important; margin:0 auto !important; }
+			.table-left { float:none !important; margin:0 auto 0 0 !important; }
+			.hide { display:none !important; width:0 !important; height:0 !important; padding:0 !important; font-size:0 !important; line-height:0 !important; }
+			.db { display:block !important; }
+			.image-m { display:table-cell !important; }
+			.image-m img { display:block !important; width:100% !important; height:auto !important; font: 10px/13px Arial,Helvetica,sans-serif; }
+			.img-flex img { width:100% !important; height:auto !important; }
+			.img-flex { width:100% !important; height:auto !important; }
+			.aligncenter { text-align:center !important; }
+			.alignleft { text-align:left !important; }
+			.table-holder { display:table !important; width:100% !important; }
+			.tcap { display:table-caption !important; width:100% !important; }
+			.thead { display:table-header-group !important; width:100% !important; }
+			.trow { display:table-row !important; width:100% !important; }
+			.tfoot { display:table-footer-group !important; width:100% !important; }
+			.row-flex { display:block !important; width:100% !important; padding-left: 0 !important; padding-right: 0 !important; border-left: none !important; border-right: none !important; }
+			/* Custom */
+			.px-15 {padding-left: 15px !important; padding-right: 15px !important;}
+			.px-0 {padding-left: 0px !important; padding-right: 0px !important;}
+			.w-15 {width: 15px !important;}
+			.pr-0 {padding-right: 0 !important;}
+			.rounded-none {border-radius: 0 !important;}
+			.h-40 {height: 40px !important;}
+			}
+	</style>
+	<!--[if gte mso 9]><xml>
+		<o:OfficeDocumentSettings>
+			<o:AllowPNG/>
+			<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml><![endif]-->
+	<!--[if (gte mso 9)|(IE)]>
+		<style type="text/css">
+			table {
+				border-collapse: collapse;
+				border-spacing: 0; 
+				mso-line-height-rule: exactly; 
+				mso-margin-bottom-alt: 0; 
+				mso-margin-top-alt: 0; 
+				mso-table-lspace: 0pt;
+				mso-table-rspace: 0pt;
+			}
+			td {
+				mso-table-lspace: 0pt !important;
+				mso-table-rspace: 0pt !important;
+			}
+			p,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			ol,
+			li,
+			ul,
+			td,
+			th,
+			.mso-font {
+				font-family: Arial, Helvetica, sans-serif !important;
+			}
+			p {
+				margin-top: 0 !important;
+				margin-bottom: 8px !important;
+			}
+			p:last-child {
+				margin-bottom: 0 !important;
+			}
+			.keep-white {
+				mso-style-textfill-type:gradient;
+				mso-style-textfill-fill-gradientfill-stoplist:"0 \#FFFFFF 0 100000\,100000 \#FFFFFF 0 100000";
+			}
+		</style>
+	<![endif]-->
+</head>
+<body style="margin:0; padding:0; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; background: #f5f5f5;">
+	<table style="min-width:320px;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#f5f5f5">
+		<tr>
+			<td style="line-height:0;"><div style="display:none; white-space:nowrap; font:15px/1px courier;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div></td>
+		</tr>
+		<tr>
+			<td>
+				<table width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+							<center>
+								<div style="max-width: 640px; margin: auto;">
+									<!--[if mso]>
+									<table role="presentation" style="width: 640px;" cellspacing="0" cellpadding="0" border="0" align="center">
+									<tr>
+									<td>
+									<![endif]-->
+									<table class="flexible" style="max-width: 640px; width: 100%; margin: 0 auto;" cellpadding="0" cellspacing="0" align="center">
+										<tr>
+											<td class="rounded-none" style="border-radius: 20px; overflow: hidden;">
+												<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+													<tr>
+														<td>
+															<!-- ||| Header ||| -->
+															<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#121C2D">
+																<tr>
+																	<td valign="top">
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td class="h-225" style="background-image: url('https://i.postimg.cc/Bvh7NVmq/header-banner.png'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; height: 176px;" background="https://i.postimg.cc/Bvh7NVmq/header-banner.png" bgcolor="#121C2D" align="center" valign="middle" height="176">
+																					<!--[if gte mso 9]>
+																					<v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="position: absolute; top: 0; left: 0; border: 0; display: inline-block; width: 640px; height:176px;" src="https://i.postimg.cc/Bvh7NVmq/header-banner.png" />
+																					<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0; display: inline-block;position: absolute; top: 0; left: 0; width: 640px; height: 176px;">
+																					<v:fill opacity="0%" />
+																					<v:textbox inset="0,0,0,0">
+																					<![endif]-->
+																					<div>
+																						<table width="100%" cellspacing="0" cellpadding="0">
+																							<tr>
+																								<td class="h-auto" height="176" valign="middle" align="left">
+																									<table width="100%" cellspacing="0" cellpadding="0">
+																										<tr>
+																											<td class="w-15" width="40"></td>
+																											<td>
+																												<table width="100%" cellspacing="0" cellpadding="0">
+																													<tr>
+																														<td style="padding: 30px 0;" align="left">
+																															<table cellspacing="0" cellpadding="0">
+																																<tr>
+																																	<td width="144">
+																																		<a style="text-decoration: none;" href="https://segment.com/" target="_blank"><img style="vertical-align: top; max-width: 100%; height: auto;" src="https://i.postimg.cc/2yWHk8r6/logo.png" width="144" alt="Twilio Segment" border="0" /></a>
+																																	</td>
+																																</tr>
+																																	<tr>
+																																		<td style="font-size: 1px; line-height: 1px; height: 32px;" height="32" valign="top">&nbsp;</td>
+																																	</tr>
+																															</table>
+																															<table cellspacing="0" cellpadding="0">
+																																<tr>
+																																	<td class="keep-white" style="font:700 24px/107% Whitney, Arial, Helvetica, sans-serif; color: #ffffff; letter-spacing: -0.014em;" valign="top">
+																																		Monthly Workspace Recap
+																																	</td>
+																																</tr>
+																															</table>
+																														</td>
+																													</tr>
+																												</table>
+																											</td>
+																											<td class="w-15" width="40"></td>
+																										</tr>
+																									</table>
+																								</td>
+																							</tr>
+																						</table>
+																					</div>
+																					<!--[if gte mso 9]> 
+																					</v:textbox>
+																					</v:fill>
+																					</v:rect>
+																					</v:image>
+																					<![endif]-->
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															<!-- ||| Header end ||| -->
+
+															<!-- ||| Body ||| -->
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td class="h-40" style="font-size: 1px; line-height: 1px; height: 81px;" height="81" valign="top">&nbsp;</td>
+																</tr>
+															</table>
+
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td class="px-15" style="padding: 0 40px;">
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td class="pr-0" style="font:400 16px/150% Whitney, Arial, Helvetica, sans-serif; color: #000000; padding-right: 20px;" valign="top">
+																					<p>Hi <strong>Jane Doe,</strong></p>
+																					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+																				</td>
+																			</tr>
+																		</table>
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td style="font-size: 1px; line-height: 1px; height: 45px;" height="45" valign="top">&nbsp;</td>
+																			</tr>
+																		</table>
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td style="font: 600 20px/150% Whitney, Arial, Helvetica, sans-serif; color: #000000; padding-bottom: 17px;" valign="top">
+																						Upcoming Events:
+																				</td>
+																			</tr>
+																		</table>
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td style="font:400 16px/150% Whitney, Arial, Helvetica, sans-serif; color: #000000;" valign="top">
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="color: #F22F46; font: 26px/26px Arial, sans-serif;" valign="top" width="21">•</td>
+																							<td valign="top">
+																								<table width="100%" cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="font:600 14px/150% Whitney, Arial, Helvetica, sans-serif; color: #000000; padding-bottom: 4px;" valign="top">
+																											Lorem ipsum dolor sit amet consectetur
+																										</td>
+																									</tr>
+																									<tr>
+																										<td style="font:400 14px/150% Whitney, Arial, Helvetica, sans-serif; color: #000000;" valign="top">
+																											Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat...
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td style="font-size: 1px; line-height: 1px; height: 15px;" height="15" valign="top">&nbsp;</td>
+																						</tr>
+																					</table>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="color: #F22F46; font: 26px/26px Arial, sans-serif;" valign="top" width="21">•</td>
+																							<td valign="top">
+																								<table width="100%" cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="font:600 14px/150% Whitney, Arial, Helvetica, sans-serif; color: #000000; padding-bottom: 4px;" valign="top">
+																											Lorem ipsum dolor sit amet consectetur
+																										</td>
+																									</tr>
+																									<tr>
+																										<td style="font:400 14px/150% Whitney, Arial, Helvetica, sans-serif; color: #000000;" valign="top">
+																											Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat...
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																						</tr>
+																						<tr>
+																							<td style="font-size: 1px; line-height: 1px; height: 15px;" height="15" valign="top">&nbsp;</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td style="font-size: 1px; line-height: 1px; height: 33px;" height="33" valign="top">&nbsp;</td>
+																			</tr>
+																		</table>
+
+																		<table cellspacing="0" cellpadding="0" align="left">
+																			<tr>
+																				<td style="border-radius: 12px; padding: 16px 24px;" bgcolor="#F4F4F6">
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td width="30" valign="middle">
+																								<img style="vertical-align: top; max-width: 100%; height: auto;" src="https://i.postimg.cc/9QhkfT4j/icon-lock.png" width="14" alt="lock" border="0" />
+																							</td>
+																							<td style="font: 400 14px/21px Whitney, Arial, Helvetica, sans-serif; color: #000000;" valign="middle">
+																								<strong>Last login to Segment:</strong> Friday, May 31, 2024
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td style="font-size: 1px; line-height: 1px; height: 79px;" height="79" valign="top">&nbsp;</td>
+																</tr>
+															</table>
+
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td class="px-15" style="padding: 0 40px;">
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td width="40">
+																								<img style="vertical-align: top; max-width: 100%; height: auto;" src="https://i.postimg.cc/cLBbtHYt/audience.png" width="40" alt="audience" border="0" />
+																							</td>
+																							<td width="16"></td>
+																							<td style="background-image: url('https://i.postimg.cc/Qtw4ZWLw/line.png'); background-repeat: no-repeat; background-position: center;">
+																								<table cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="font:600 32px/110% Whitney, Arial, Helvetica, sans-serif; color: #000000; padding-right: 16px; letter-spacing: -0.04em;" align="left" bgcolor="#ffffff">
+																											Audiences
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																						</tr>
+																					</table>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="font-size: 1px; line-height: 1px; height: 39px;" height="39" valign="top">&nbsp;</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td class="row-flex" style="border-radius: 8px;" width="31.4286%" bgcolor="#E9FAF3" valign="top">
+																								<table width="100%" cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="padding: 31px 14px 25px;" valign="top">
+																											<table width="100%" cellspacing="0" cellpadding="0">
+																												<tr>
+																													<td style="font:600 40px/40px Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-bottom: 25px;" align="center">888</td>
+																												</tr>
+																												<tr>
+																													<td style="font:500 16px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D;" valign="top" align="center">
+																														number of active audiences
+																													</td>
+																												</tr>
+																												<tr>
+																													<td style="font:400 12px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-top: 37px;" align="center">
+																														<strong style="color: #F22F46;">-88</strong> from last month
+																													</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																							<td class="row-flex" width="2.8572%" height="16"></td>
+																							<td class="row-flex" style="border-radius: 8px;" width="31.4286%" bgcolor="#E9FAF3" valign="top">
+																								<table width="100%" cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="padding: 31px 14px 25px;" valign="top">
+																											<table width="100%" cellspacing="0" cellpadding="0">
+																												<tr>
+																													<td style="font:600 40px/40px Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-bottom: 28px;" align="center">888</td>
+																												</tr>
+																												<tr>
+																													<td style="font:500 16px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D;" valign="top" align="center">
+																														audiences not connected to a downstream tools
+																													</td>
+																												</tr>
+																												<tr>
+																													<td style="font:400 12px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-top: 14px;" align="center">
+																														<strong style="color: #6ADDB2;">+88</strong> from last month
+																													</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																							<td class="row-flex" width="2.8572%" height="16"></td>
+																							<td class="row-flex" style="border-radius: 8px;" width="31.4286%" bgcolor="#E9FAF3" valign="top">
+																								<table width="100%" cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="padding: 31px 14px 25px;" valign="top">
+																											<table width="100%" cellspacing="0" cellpadding="0">
+																												<tr>
+																													<td style="font:600 40px/40px Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-bottom: 28px;" align="center">888</td>
+																												</tr>
+																												<tr>
+																													<td style="font:500 16px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D;" valign="top" align="center">
+																														unique Events used across all audiences
+																													</td>
+																												</tr>
+																												<tr>
+																													<td style="font:400 12px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-top: 14px;" align="center">
+																														<strong style="color: #F22F46;">-88</strong> from last month
+																													</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																						</tr>
+																					</table>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="font-size: 1px; line-height: 1px; height: 16px;" height="16" valign="top">&nbsp;</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td style="font-size: 1px; line-height: 1px; height: 24px;" height="24" valign="top">&nbsp;</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="font: 600 16px/150% Whitney , Arial, Helvetica, sans-serif; color: #000000; padding-bottom: 16px;" valign="top">
+																								Suggestion about Audiences
+																							</td>
+																						</tr>
+																						<tr>
+																							<td style="font: 400 14px/150% Whitney , Arial, Helvetica, sans-serif; color: #000000;" valign="top">
+																								<strong>XX</strong> audience saw a <strong>XX</strong>% increase in members <br /><br />
+																								<strong>XX</strong> audience saw a <strong>XX</strong>% decrease in members
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td style="font-size: 1px; line-height: 1px; height: 40px;" height="40" valign="top">&nbsp;</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td align="center">
+																					<table align="center" border="0" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="mso-padding-alt: 0 24px; font:400 16px/1 Graphik, Arial, Helvetica, sans-serif; color: #ffffff; border-radius: 4px;" align="center" valign="middle" height="56" bgcolor="#0263E0">
+																								<a  href="https://segment.com/" target="_blank" style="text-decoration:none; line-height:56px; color:#ffffff; display:block; padding: 0 24px;">View my Audiences</a>
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td style="font-size: 1px; line-height: 1px; height: 80px;" height="80" valign="top">&nbsp;</td>
+																</tr>
+															</table>
+
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td class="px-15" style="padding: 0 40px;">
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td width="40">
+																								<img style="vertical-align: top; max-width: 100%; height: auto;" src="https://i.postimg.cc/WpqY6Sgv/traits.png" width="40" alt="traits" border="0" />
+																							</td>
+																							<td width="16"></td>
+																							<td style="background-image: url('https://i.postimg.cc/Qtw4ZWLw/line.png'); background-repeat: no-repeat; background-position: center;">
+																								<table cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="font:600 32px/110% Whitney, Arial, Helvetica, sans-serif; color: #000000; padding-right: 16px; letter-spacing: -0.04em;" align="left" bgcolor="#ffffff">
+																											Traits
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																						</tr>
+																					</table>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="font-size: 1px; line-height: 1px; height: 39px;" height="39" valign="top">&nbsp;</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td class="row-flex" style="border-radius: 8px;" width="31.4286%" bgcolor="#E9FAF3" valign="top">
+																								<table width="100%" cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="padding: 31px 14px 25px;" valign="top">
+																											<table width="100%" cellspacing="0" cellpadding="0">
+																												<tr>
+																													<td style="font:600 40px/40px Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-bottom: 25px;" align="center">888</td>
+																												</tr>
+																												<tr>
+																													<td style="font:500 16px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D;" valign="top" align="center">
+																														Traits being sent to destinations
+																													</td>
+																												</tr>
+																												<tr>
+																													<td style="font:400 12px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-top: 37px;" align="center">
+																														<strong style="color: #F22F46;">-88</strong> from last month
+																													</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																							<td class="row-flex" width="2.8572%" height="16"></td>
+																							<td class="row-flex" style="border-radius: 8px;" width="31.4286%" bgcolor="#E9FAF3" valign="top">
+																								<table width="100%" cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="padding: 31px 14px 25px;" valign="top">
+																											<table width="100%" cellspacing="0" cellpadding="0">
+																												<tr>
+																													<td style="font:600 40px/40px Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-bottom: 28px;" align="center">888</td>
+																												</tr>
+																												<tr>
+																													<td style="font:500 16px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D;" valign="top" align="center">
+																														Number of Predictive traits
+																													</td>
+																												</tr>
+																												<tr>
+																													<td style="font:400 12px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-top: 34px;" align="center">
+																														<strong style="color: #6ADDB2;">+88</strong> from last month
+																													</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																							<td class="row-flex" width="2.8572%" height="16"></td>
+																							<td class="row-flex" style="border-radius: 8px;" width="31.4286%" bgcolor="#E9FAF3" valign="top">
+																								<table width="100%" cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="padding: 31px 14px 25px;" valign="top">
+																											<table width="100%" cellspacing="0" cellpadding="0">
+																												<tr>
+																													<td style="font:600 40px/40px Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-bottom: 28px;" align="center">888</td>
+																												</tr>
+																												<tr>
+																													<td style="font:500 16px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D;" valign="top" align="center">
+																														of unique Traits used across all audiences
+																													</td>
+																												</tr>
+																												<tr>
+																													<td style="font:400 12px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-top: 14px;" align="center">
+																														<strong style="color: #F22F46;">-88</strong> from last month
+																													</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																						</tr>
+																					</table>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="font-size: 1px; line-height: 1px; height: 16px;" height="16" valign="top">&nbsp;</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td style="font-size: 1px; line-height: 1px; height: 21px;" height="21" valign="top">&nbsp;</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="font: 600 20px/150% Whitney , Arial, Helvetica, sans-serif; color: #000000; padding-bottom: 20px; letter-spacing: -0.04em" valign="top">
+																								Most popular trait
+																							</td>
+																						</tr>
+																						<tr>
+																							<td style="font: 600 16px/150% Whitney , Arial, Helvetica, sans-serif; color: #000000; padding-bottom: 16px;" valign="top">
+																								Suggestion about traits
+																							</td>
+																						</tr>
+																						<tr>
+																							<td style="font: 400 14px/150% Whitney , Arial, Helvetica, sans-serif; color: #000000;" valign="top">
+																								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td style="font-size: 1px; line-height: 1px; height: 40px;" height="40" valign="top">&nbsp;</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td align="center">
+																					<table align="center" border="0" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="mso-padding-alt: 0 24px; font:400 16px/1 Graphik, Arial, Helvetica, sans-serif; color: #ffffff; border-radius: 4px;" align="center" valign="middle" height="56" bgcolor="#0263E0">
+																								<a  href="https://segment.com/" target="_blank" style="text-decoration:none; line-height:56px; color:#ffffff; display:block; padding: 0 24px;">View my Traits</a>
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td style="font-size: 1px; line-height: 1px; height: 80px;" height="80" valign="top">&nbsp;</td>
+																</tr>
+															</table>
+
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td class="px-15" style="padding: 0 40px;">
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td width="40">
+																								<img style="vertical-align: top; max-width: 100%; height: auto;" src="https://i.postimg.cc/gJnS7H73/journey.png" width="40" alt="journey" border="0" />
+																							</td>
+																							<td width="16"></td>
+																							<td style="background-image: url('https://i.postimg.cc/Qtw4ZWLw/line.png'); background-repeat: no-repeat; background-position: center;">
+																								<table cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="font:600 32px/110% Whitney, Arial, Helvetica, sans-serif; color: #000000; padding-right: 16px; letter-spacing: -0.04em;" align="left" bgcolor="#ffffff">
+																											Journeys
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																						</tr>
+																					</table>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="font-size: 1px; line-height: 1px; height: 39px;" height="39" valign="top">&nbsp;</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td class="row-flex" style="border-radius: 8px;" width="31.4286%" bgcolor="#E9FAF3" valign="top">
+																								<table width="100%" cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="padding: 31px 14px 25px;" valign="top">
+																											<table width="100%" cellspacing="0" cellpadding="0">
+																												<tr>
+																													<td style="font:600 40px/40px Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-bottom: 25px;" align="center">888</td>
+																												</tr>
+																												<tr>
+																													<td style="font:500 16px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D;" valign="top" align="center">
+																														Total active Journeys
+																													</td>
+																												</tr>
+																												<tr>
+																													<td style="font:400 12px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-top: 10px;" align="center">
+																														<strong style="color: #F22F46;">-88</strong> from last month
+																													</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																							<td class="row-flex" width="2.8572%" height="16"></td>
+																							<td class="row-flex" style="border-radius: 8px;" width="31.4286%" bgcolor="#E9FAF3" valign="top">
+																								<table width="100%" cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="padding: 31px 14px 25px;" valign="top">
+																											<table width="100%" cellspacing="0" cellpadding="0">
+																												<tr>
+																													<td style="font:600 40px/40px Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-bottom: 28px;" align="center">888</td>
+																												</tr>
+																												<tr>
+																													<td style="font:500 16px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D;" valign="top" align="center">
+																														Average number of journey steps
+																													</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																							<td class="row-flex" width="2.8572%" height="16"></td>
+																							<td class="row-flex" style="border-radius: 8px;" width="31.4286%" bgcolor="#E9FAF3" valign="top">
+																								<table width="100%" cellspacing="0" cellpadding="0">
+																									<tr>
+																										<td style="padding: 31px 14px 25px;" valign="top">
+																											<table width="100%" cellspacing="0" cellpadding="0">
+																												<tr>
+																													<td style="font:600 40px/40px Whitney, Arial, Helvetica, sans-serif; color: #121C2D; padding-bottom: 28px;" align="center">888</td>
+																												</tr>
+																												<tr>
+																													<td style="font:500 16px/130% Whitney, Arial, Helvetica, sans-serif; color: #121C2D;" valign="top" align="center">
+																														Top journey destination
+																													</td>
+																												</tr>
+																											</table>
+																										</td>
+																									</tr>
+																								</table>
+																							</td>
+																						</tr>
+																					</table>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="font-size: 1px; line-height: 1px; height: 16px;" height="16" valign="top">&nbsp;</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td style="font-size: 1px; line-height: 1px; height: 26px;" height="26" valign="top">&nbsp;</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td>
+																					<table width="100%" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="font: 600 16px/150% Whitney , Arial, Helvetica, sans-serif; color: #000000; padding-bottom: 16px;" valign="top">
+																								Suggestion about Journeys
+																							</td>
+																						</tr>
+																						<tr>
+																							<td style="font: 400 14px/150% Whitney , Arial, Helvetica, sans-serif; color: #000000;" valign="top">
+																								Encourage the value of omnichannel in Journeys (if there is only 1 destination in any given journey)
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td style="font-size: 1px; line-height: 1px; height: 40px;" height="40" valign="top">&nbsp;</td>
+																			</tr>
+																		</table>
+
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td align="center">
+																					<table align="center" border="0" cellspacing="0" cellpadding="0">
+																						<tr>
+																							<td style="mso-padding-alt: 0 24px; font:400 16px/1 Graphik, Arial, Helvetica, sans-serif; color: #ffffff; border-radius: 4px;" align="center" valign="middle" height="56" bgcolor="#0263E0">
+																								<a  href="https://segment.com/" target="_blank" style="text-decoration:none; line-height:56px; color:#ffffff; display:block; padding: 0 24px;">View my Journeys</a>
+																							</td>
+																						</tr>
+																					</table>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+
+															<table width="100%" cellspacing="0" cellpadding="0">
+																<tr>
+																	<td class="h-40" style="font-size: 1px; line-height: 1px; height: 79px;" height="79" valign="top">&nbsp;</td>
+																</tr>
+															</table>
+															<!-- ||| Body end ||| -->
+
+															<!-- ||| Footer ||| -->
+															<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#121C2D">
+																<tr>
+																	<td valign="top">
+																		<table width="100%" cellspacing="0" cellpadding="0">
+																			<tr>
+																				<td class="h-225" style="background-image: url('https://i.postimg.cc/jjqkHbQg/footer-bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; height: 176px;" background="https://i.postimg.cc/jjqkHbQg/footer-bg.png" bgcolor="#121C2D" align="center" valign="middle" height="212">
+																					<!--[if gte mso 9]>
+																					<v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="position: absolute; top: 0; left: 0; border: 0; display: inline-block; width: 640px; height:212px;" src="https://i.postimg.cc/jjqkHbQg/footer-bg.png" />
+																					<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0; display: inline-block;position: absolute; top: 0; left: 0; width: 640px; height: 212px;">
+																					<v:fill opacity="0%" />
+																					<v:textbox inset="0,0,0,0">
+																					<![endif]-->
+																					<div>
+																						<table width="100%" cellspacing="0" cellpadding="0">
+																							<tr>
+																								<td class="h-auto" height="212" valign="middle" align="center">
+																									<table width="100%" cellspacing="0" cellpadding="0">
+																										<tr>
+																											<td class="w-15" width="40"></td>
+																											<td>
+																												<table width="100%" cellspacing="0" cellpadding="0">
+																													<tr>
+																														<td style="padding: 30px 0;" align="center">
+																															<table cellspacing="0" cellpadding="0">
+																																<tr>
+																																	<td width="144">
+																																		<a style="text-decoration: none;" href="https://segment.com/" target="_blank"><img style="vertical-align: top; max-width: 100%; height: auto;" src="https://i.postimg.cc/2yWHk8r6/logo.png" width="144" alt="Twilio Segment" border="0" /></a>
+																																	</td>
+																																</tr>
+																																<tr>
+																																	<td style="font-size: 1px; line-height: 1px; height: 25px;" height="25" valign="top">&nbsp;</td>
+																																</tr>
+																															</table>
+																															<table cellspacing="0" cellpadding="0">
+																																<tr>
+																																	<td class="keep-white" style="font:400 14px/20px Whitney, Arial, Helvetica, sans-serif; color: #ffffff;" valign="top">
+																																		© 2024 Twilio Inc. All Rights Reserved.
+																																	</td>
+																																</tr>
+																															</table>
+																														</td>
+																													</tr>
+																												</table>
+																											</td>
+																											<td class="w-15" width="40"></td>
+																										</tr>
+																									</table>
+																								</td>
+																							</tr>
+																						</table>
+																					</div>
+																					<!--[if gte mso 9]> 
+																					</v:textbox>
+																					</v:fill>
+																					</v:rect>
+																					</v:image>
+																					<![endif]-->
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																</tr>
+															</table>
+															<!-- ||| Footer end ||| -->
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+									<!--[if mso]>
+									</td>
+									</tr>
+									</table>
+									<![endif]-->
+								</div>
+							</center>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
