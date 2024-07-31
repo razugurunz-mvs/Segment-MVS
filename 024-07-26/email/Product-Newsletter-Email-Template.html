@@ -135,6 +135,8 @@
 			.h-20 {height: 20px !important;}
 			.h-auto {height: auto !important;}
 			.fz-12 {font-size: 12px !important;}
+			.gmail-blend-screen { background:#121C2D; mix-blend-mode:screen; display: inline-block;}
+			.gmail-blend-difference { background:#121C2D; mix-blend-mode:difference; display: inline-block; }
 			}
 	</style>
 	<!--[if gte mso 9]><xml>
@@ -1261,24 +1263,29 @@
 																	<td valign="top">
 																		<table width="100%" cellspacing="0" cellpadding="0">
 																			<tr>
-																				<td style="background-image: url('https://userimg-assets.customeriomail.com/images/client-env-112378/1722014169732_footer-bg_01J3R0NYQ65AGP1FJRB9YVWD2Y.png'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; height: 176px;" background="https://userimg-assets.customeriomail.com/images/client-env-112378/1722014169732_footer-bg_01J3R0NYQ65AGP1FJRB9YVWD2Y.png" bgcolor="#121C2D" align="center" valign="top" height="184">
+																				<td style="background-image: url('https://userimg-assets.customeriomail.com/images/client-env-112378/1722014169732_footer-bg_01J3R0NYQ65AGP1FJRB9YVWD2Y.png'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; height: 214px;" background="https://userimg-assets.customeriomail.com/images/client-env-112378/1722014169732_footer-bg_01J3R0NYQ65AGP1FJRB9YVWD2Y.png" bgcolor="#121C2D" align="center" valign="top" height="214">
 																					<!--[if gte mso 9]>
-																					<v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="position: absolute; top: 0; left: 0; border: 0; display: inline-block; width: 640px; height:184px;" src="https://userimg-assets.customeriomail.com/images/client-env-112378/1722014169732_footer-bg_01J3R0NYQ65AGP1FJRB9YVWD2Y.png" />
-																					<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0; display: inline-block;position: absolute; top: 0; left: 0; width: 640px; height: 184px;">
+																					<v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="position: absolute; top: 0; left: 0; border: 0; display: inline-block; width: 640px; height:214px;" src="https://userimg-assets.customeriomail.com/images/client-env-112378/1722014169732_footer-bg_01J3R0NYQ65AGP1FJRB9YVWD2Y.png" />
+																					<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0; display: inline-block;position: absolute; top: 0; left: 0; width: 640px; height: 214px;">
 																					<v:fill opacity="0%" />
 																					<v:textbox inset="0,0,0,0">
 																					<![endif]-->
 																					<div>
 																						<table width="100%" cellspacing="0" cellpadding="0">
 																							<tr>
-																								<td class="h-auto" height="184" valign="top" align="center">
+																								<td class="h-auto" height="214" valign="top" align="center">
 																									<table width="100%" cellspacing="0" cellpadding="0">
 																										<tr>
 																											<td class="w-15" width="32"></td>
 																											<td>
 																												<table width="100%" cellspacing="0" cellpadding="0">
 																													<tr>
-																														<td style="padding: 32px 0 28px;">
+																														<td style="font-size: 1px; line-height: 1px; height: 32px;" height="32" valign="top">&nbsp;</td>
+																													</tr>
+																												</table>
+																												<table width="100%" cellspacing="0" cellpadding="0">
+																													<tr>
+																														<td>
 																															<table width="100%" cellspacing="0" cellpadding="0">
 																																<tr>
 																																	<td class="row-flex" width="144" align="center">
@@ -1292,7 +1299,11 @@
 																																	</td>
 																																	<td class="row-flex" width="10" height="20"></td>
 																																	<td class="row-flex aligncenter" style="font: 400 14px/150% Whitney , Arial, Helvetica, sans-serif; color: #000000;" align="right">
-																																		<a class="keep-white" style="text-decoration: underline; color: #ffffff;" href="{% unsubscribe_url %}" target="_blank">Remove me from this campaign</a>
+																																		<div class="gmail-blend-screen">
+																																			<div class="gmail-blend-difference">
+																																				<a class="keep-white" style="text-decoration: underline; color: #ffffff;" href="{% unsubscribe_url %}" target="_blank">Remove me from this campaign</a>
+																																			</div>
+																																		</div>
 																																	</td>
 																																</tr>
 																															</table>
@@ -1311,10 +1322,25 @@
 																															</table>
 																															<table width="100%" cellspacing="0" cellpadding="0">
 																																<tr class="table-holder">
-																																	<td class="keep-white tfoot aligncenter" style="font:400 12px/18px Whitney, Arial, Helvetica, sans-serif; color: #AEB2C1;" valign="top">
-																																		© 2024 Twilio Inc. All Rights Reserved.
+																																	<td class="tfoot">
+																																		<table width="100%" cellspacing="0" cellpadding="0">
+																																			<tr>
+																																				<td class="keep-white aligncenter fz-12" style="font:400 14px/18px Whitney, Arial, Helvetica, sans-serif; color: #606B85; padding-bottom: 14px;" valign="top">
+																																					<div class="gmail-blend-screen">
+																																						<div class="gmail-blend-difference">
+																																							<a href="https://community.segment.com/" class="keep-white" style="text-decoration: underline; color: #ffffff" target="_blank">Segment Community</a>  &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  <a href="{% view_in_browser_url %}" class="keep-white" style="text-decoration: underline; color: #ffffff" target="_blank">View in Browser</a>
+																																						</div>
+																																					</div>
+																																				</td>
+																																			</tr>
+																																			<tr>
+																																				<td class="keep-white aligncenter" style="font:400 12px/18px Whitney, Arial, Helvetica, sans-serif; color: #AEB2C1;" valign="top">
+																																					© 2024 Twilio Inc. All Rights Reserved.
+																																				</td>
+																																			</tr>
+																																		</table>
 																																	</td>
-																																	<td class="trow" width="10" height="20"></td>
+																																	<td class="trow" width="10" height="30"></td>
 																																	<td class="thead" align="right">
 																																		<table class="table-center" cellspacing="0" cellpadding="0">
 																																			<tr>
@@ -1335,6 +1361,11 @@
 																																</tr>
 																															</table>
 																														</td>
+																													</tr>
+																												</table>
+																												<table width="100%" cellspacing="0" cellpadding="0">
+																													<tr>
+																														<td style="font-size: 1px; line-height: 1px; height: 28px;" height="28" valign="top">&nbsp;</td>
 																													</tr>
 																												</table>
 																											</td>
